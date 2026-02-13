@@ -3,216 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rutas Quisqueyanas | Premium Tours in Dominican Republic</title>
+<title>Rutas Quisqueyanas | Premium Dominican Experiences</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #f8f9fc;
-  color: #222;
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f6fb;
+color:#1a1a1a;
+line-height:1.6;
 }
 
-header {
-  background: #0a1f44;
-  padding: 15px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+header{
+background:#071a35;
+padding:18px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: 500;
+header strong{
+font-size:20px;
+letter-spacing:1px;
 }
 
-.language-switcher button {
-  background: #ff7b00;
-  border: none;
-  color: white;
-  padding: 5px 10px;
-  margin-left: 5px;
-  cursor: pointer;
-  border-radius: 4px;
+nav{
+display:flex;
+align-items:center;
+gap:20px;
 }
 
-.hero {
-  height: 90vh;
-  background: url('https://images.unsplash.com/photo-1544739313-8f7b9f06f8ef') center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 20px;
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
 }
 
-.hero h1 {
-  font-size: 52px;
-  max-width: 900px;
+nav a:hover{
+color:#ff8c00;
 }
 
-.hero p {
-  margin-top: 20px;
-  font-size: 20px;
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
 }
 
-.btn {
-  margin-top: 30px;
-  background: #ff7b00;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s;
+.hero h1{
+font-size:50px;
+max-width:900px;
+margin-bottom:20px;
 }
 
-.btn:hover {
-  background: #e56d00;
+.hero p{
+font-size:20px;
+max-width:700px;
+margin-bottom:30px;
 }
 
-.section {
-  padding: 80px 50px;
-  max-width: 1300px;
-  margin: auto;
+.btn{
+background:#ff8c00;
+color:white;
+padding:12px 28px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+display:inline-block;
 }
 
-.section h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 32px;
+.btn:hover{
+background:#e67300;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+.section{
+padding:100px 30px;
+max-width:1200px;
+margin:auto;
 }
 
-.card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: 0.3s;
+.section h2{
+text-align:center;
+font-size:34px;
+margin-bottom:60px;
+color:#071a35;
 }
 
-.card:hover {
-  transform: translateY(-8px);
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 15px 30px rgba(0,0,0,0.08);
+transition:.3s;
 }
 
-.card-content {
-  padding: 20px;
+.card:hover{
+transform:translateY(-10px);
 }
 
-.price {
-  font-weight: 700;
-  margin: 10px 0;
-  color: #0a1f44;
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
 }
 
-.review-box {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+.card-content{
+padding:25px;
 }
 
-footer {
-  background: #0a1f44;
-  color: white;
-  text-align: center;
-  padding: 40px;
+.price{
+font-weight:700;
+margin:15px 0;
+color:#071a35;
+}
+
+.footer{
+background:#071a35;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:32px;
+}
+.hero p{
+font-size:16px;
+}
+nav{
+display:none;
+}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<div><strong>Rutas Quisqueyanas</strong></div>
+<strong>Rutas Quisqueyanas</strong>
 <nav>
-<a href="#tours" data-en="Tours" data-es="Tours" data-fr="Tours">Tours</a>
-<a href="#hotels" data-en="Hotels" data-es="Hoteles" data-fr="Hôtels">Hotels</a>
-<a href="#reviews" data-en="Reviews" data-es="Reseñas" data-fr="Avis">Reviews</a>
-<a href="#faq" data-en="FAQ" data-es="Preguntas" data-fr="FAQ">FAQ</a>
-<span class="language-switcher">
-<button onclick="changeLanguage('en')">EN</button>
-<button onclick="changeLanguage('es')">ES</button>
-<button onclick="changeLanguage('fr')">FR</button>
-</span>
+<a href="#tours">Tours</a>
+<a href="#hotels">Hotels</a>
+<a href="#contact">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1 
-data-en="Experience the Dominican Republic Like Never Before"
-data-es="Vive la República Dominicana Como Nunca Antes"
-data-fr="Vivez la République Dominicaine Comme Jamais Auparavant">
-Experience the Dominican Republic Like Never Before
-</h1>
-
-<p 
-data-en="Luxury tours, paradise beaches, waterfalls, mountains and unforgettable adventures."
-data-es="Tours de lujo, playas paradisíacas, cascadas, montañas y aventuras inolvidables."
-data-fr="Tours de luxe, plages paradisiaques, cascades, montagnes et aventures inoubliables.">
-Luxury tours, paradise beaches, waterfalls, mountains and unforgettable adventures.
-</p>
-
-<a href="#tours" class="btn">Explore Tours</a>
+<h1>Luxury Travel & Boutique Stay Experiences in the Dominican Republic</h1>
+<p>Premium tours, exclusive hotels, paradise beaches and unforgettable adventures curated for sophisticated travelers.</p>
+<a href="#tours" class="btn">Explore Experiences</a>
 </section>
 
 <section class="section" id="tours">
-<h2>Popular Tours</h2>
+<h2>Signature Luxury Tours</h2>
 
 <div class="grid">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 <div class="card-content">
-<h3>Punta Cana Luxury Experience</h3>
-<p class="price">US$129 per person</p>
-<p>Hotel pickup • Buffet • Open bar • Certified guide • Insurance</p>
-<a class="btn" href="https://wa.me/18493425653">Book Now</a>
+<h3>Punta Cana Elite Escape</h3>
+<p class="price">From US$129</p>
+<p>Private transport • VIP beach access • Open bar • Certified bilingual guide</p>
+<a href="https://wa.me/18493425653" class="btn">Reserve Now</a>
 </div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4">
 <div class="card-content">
-<h3>Samaná & Cayo Levantado</h3>
-<p class="price">US$149 per person</p>
-<p>Boat ride • Waterfalls • Lunch included • Small groups</p>
-<a class="btn" href="https://wa.me/18493425653">Book Now</a>
+<h3>Samaná Paradise Experience</h3>
+<p class="price">From US$149</p>
+<p>Boat tour • Waterfalls • Gourmet lunch • Small exclusive groups</p>
+<a href="https://wa.me/18493425653" class="btn">Reserve Now</a>
 </div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c">
 <div class="card-content">
-<h3>Bahía de las Águilas</h3>
-<p class="price">US$165 per person</p>
-<p>4x4 transport • Boat access • National park • Free cancellation</p>
-<a class="btn" href="https://wa.me/18493425653">Book Now</a>
+<h3>Bahía de las Águilas Expedition</h3>
+<p class="price">From US$165</p>
+<p>4x4 luxury transfer • National park access • Premium service</p>
+<a href="https://wa.me/18493425653" class="btn">Reserve Now</a>
 </div>
 </div>
 
@@ -220,65 +219,44 @@ Luxury tours, paradise beaches, waterfalls, mountains and unforgettable adventur
 </section>
 
 <section class="section" id="hotels">
-<h2>Recommended Hotels</h2>
+<h2>Boutique & Luxury Stays</h2>
+
 <div class="grid">
+
+<div class="card">
+<img src="9325f843-26ba-40a1-9377-0105f1db4218.JPG">
+<div class="card-content">
+<h3>Boutique Hotel Collection</h3>
+<p>Exclusive boutique stays in Santo Domingo & Samaná designed for comfort and elegance.</p>
+<a href="https://wa.me/18493425653" class="btn">Book Your Stay</a>
+</div>
+</div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
 <div class="card-content">
 <h3>Luxury Beach Resorts</h3>
-<p>All-inclusive options in Punta Cana & La Romana.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1551887373-6d3c52b6c1a4">
-<div class="card-content">
-<h3>Boutique Hotels</h3>
-<p>Unique stays in Santo Domingo & Samaná.</p> 
-  <img src="9325f843-26ba-40a1-9377-0105f1db4218.JPG" alt="hotel boutque">
-  
+<p>All-inclusive premium resorts in Punta Cana & La Romana.</p>
+<a href="https://wa.me/18493425653" class="btn">View Resorts</a>
 </div>
 </div>
 
 </div>
 </section>
 
-<section class="section" id="reviews">
-<h2>What Our Clients Say</h2>
-<div class="grid">
-
-<div class="review-box">
-⭐ 4.9/5  
-<p>"Amazing experience! Professional and safe. Highly recommended!"</p>
-</div>
-
-<div class="review-box">
-⭐ 5/5  
-<p>"Best tour company in Dominican Republic. Everything was perfect."</p>
-</div>
-
+<section class="section" id="contact">
+<h2>Contact & Private Reservations</h2>
+<p style="text-align:center;max-width:700px;margin:auto;">
+For custom itineraries, private group bookings or VIP experiences, contact us directly.
+</p>
+<div style="text-align:center;margin-top:30px;">
+<a href="https://wa.me/18493425653" class="btn">Chat on WhatsApp</a>
 </div>
 </section>
 
-<section class="section" id="faq">
-<h2>FAQ</h2>
-<p><strong>Is transportation included?</strong><br>Yes, hotel pickup and drop-off included.</p>
-<p><strong>Cancellation policy?</strong><br>Free cancellation up to 24 hours before departure.</p>
-<p><strong>Languages available?</strong><br>English, Spanish and French guides available.</p>
-</section>
-
-<footer>
-© 2026 Rutas Quisqueyanas | Dominican Republic
+<footer class="footer">
+© 2026 Rutas Quisqueyanas | Premium Dominican Experiences
 </footer>
-
-<script>
-function changeLanguage(lang) {
-  document.querySelectorAll("[data-en]").forEach(el => {
-    el.textContent = el.getAttribute("data-" + lang);
-  });
-}
-</script>
 
 </body>
 </html>
