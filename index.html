@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rutas Quisqueyanas | Dominican Republic</title>
+<title>Rutas Quisqueyanas | Discover Dominican Republic</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -21,8 +20,6 @@ body{
 background:#f5f7fa;
 color:#222;
 }
-
-/* NAVBAR */
 
 nav{
 position:fixed;
@@ -39,22 +36,18 @@ z-index:1000;
 
 nav h1{
 color:#fff;
-font-weight:700;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 margin-left:20px;
-font-weight:500;
 transition:0.3s;
 }
 
 nav a:hover{
 color:#00e0ff;
 }
-
-/* HERO */
 
 .hero{
 height:100vh;
@@ -85,28 +78,6 @@ font-size:50px;
 margin-bottom:20px;
 }
 
-.hero p{
-font-size:20px;
-margin-bottom:30px;
-}
-
-.btn{
-background:#ff7b00;
-color:white;
-padding:15px 30px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-text-decoration:none;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#ff5500;
-}
-
-/* SECTION */
-
 .section{
 padding:100px 60px;
 }
@@ -118,15 +89,11 @@ font-size:36px;
 color:#0a1f44;
 }
 
-/* GRID */
-
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
 }
-
-/* CARD */
 
 .card{
 background:white;
@@ -158,7 +125,10 @@ font-weight:700;
 margin:10px 0;
 }
 
-/* MODAL */
+.rating{
+color:#ffb400;
+font-weight:600;
+}
 
 .modal{
 display:none;
@@ -167,22 +137,31 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.8);
-justify-content:center;
-align-items:center;
+background:rgba(0,0,0,0.9);
+overflow:auto;
+padding:50px;
 z-index:2000;
 }
 
+.modal-content{
+background:white;
+padding:30px;
+border-radius:15px;
+max-width:1000px;
+margin:auto;
+}
+
 .modal img{
-max-width:80%;
+width:100%;
 border-radius:10px;
+margin-bottom:20px;
 }
 
-.modal.active{
-display:flex;
+.close{
+float:right;
+font-size:28px;
+cursor:pointer;
 }
-
-/* FOOTER */
 
 footer{
 background:#0a1f44;
@@ -190,97 +169,122 @@ color:white;
 text-align:center;
 padding:40px;
 }
-
 </style>
 </head>
+
 <body>
 
 <nav>
 <h1>Rutas Quisqueyanas</h1>
 <div>
-<a href="#hotels">Hotels</a>
-<a href="#tours">Tours</a>
-<a href="#contact">Contact</a>
+<a href="#destinos">Destinations</a>
+<a href="https://wa.me/18493425653" target="_blank">WhatsApp</a>
+<a href="https://instagram.com" target="_blank">Instagram</a>
 </div>
 </nav>
 
 <section class="hero">
 <div class="hero-content">
-<h2>Discover Dominican Republic</h2>
-<p>Luxury experiences, authentic culture & unforgettable beaches</p>
-<a href="#tours" class="btn">Explore Now</a>
+<h2>Explore the Dominican Republic</h2>
+<p>Beaches • Culture • Luxury • Adventure</p>
 </div>
 </section>
 
-<section class="section" id="hotels">
-<h2>Top Hotels in Punta Cana</h2>
+<section class="section" id="destinos">
+<h2>Top Destinations</h2>
+
 <div class="grid">
 
-<div class="card" onclick="openModal(this)">
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<div class="card" onclick="openDestination('puntacana')">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 <div class="card-content">
-<h3>Luxury Beach Resort</h3>
-<p class="price">From $220/night</p>
-<p>5 stars • All inclusive • Beachfront</p>
+<h3>Punta Cana</h3>
+<p>White sand beaches & luxury resorts</p>
 </div>
 </div>
 
-<div class="card" onclick="openModal(this)">
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-<div class="card-content">
-<h3>Adults Only Paradise</h3>
-<p class="price">From $250/night</p>
-<p>Spa • Infinity pool • Premium service</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<section class="section" id="tours">
-<h2>Popular Tours & Excursions</h2>
-<div class="grid">
-
-<div class="card" onclick="openModal(this)">
+<div class="card" onclick="openDestination('samana')">
 <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4">
 <div class="card-content">
-<h3>Samaná & Cayo Levantado</h3>
-<p class="price">$149 per person</p>
-<p>Boat ride • Waterfalls • Lunch included</p>
+<h3>Samaná</h3>
+<p>Waterfalls • Cayo Levantado • Nature</p>
 </div>
 </div>
 
-<div class="card" onclick="openModal(this)">
-<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c">
+<div class="card" onclick="openDestination('distrito')">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
 <div class="card-content">
-<h3>Bahía de las Águilas</h3>
-<p class="price">$165 per person</p>
-<p>4x4 transport • National Park • Crystal water</p>
+<h3>Distrito Nacional</h3>
+<p>Zona Colonial • Faro a Colón • Los Tres Ojos</p>
 </div>
 </div>
 
 </div>
 </section>
 
-<div class="modal" id="modal" onclick="closeModal()">
-<img id="modalImg">
+<div class="modal" id="modal">
+<div class="modal-content" id="modalData">
+<span class="close" onclick="closeModal()">&times;</span>
+</div>
 </div>
 
-<footer id="contact">
-<p>© 2026 Rutas Quisqueyanas | Dominican Republic Tourism</p>
-<p>WhatsApp: +1 (849) 342-5653</p>
+<footer>
+<p>© 2026 Rutas Quisqueyanas</p>
+<p>WhatsApp: +1 849 342 5653</p>
 </footer>
 
 <script>
 
-function openModal(card){
-const img = card.querySelector("img").src;
-document.getElementById("modalImg").src = img;
-document.getElementById("modal").classList.add("active");
+function openDestination(place){
+
+let content = "";
+
+if(place === "puntacana"){
+content = `
+<h2>Punta Cana</h2>
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<h3>Top Hotels</h3>
+<p class="rating">★★★★★ 9.1 Excellent</p>
+<p>Hard Rock Hotel & Casino - From $320/night</p>
+<p>Secrets Cap Cana - From $410/night</p>
+<p>Majestic Mirage - From $280/night</p>
+<h3>Popular Spots</h3>
+<p>Bávaro Beach • Macao Beach • Scape Park • Coco Bongo</p>
+`;
+}
+
+if(place === "samana"){
+content = `
+<h2>Samaná</h2>
+<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4">
+<h3>Top Hotels</h3>
+<p class="rating">★★★★☆ 8.8 Very Good</p>
+<p>Bahía Príncipe Luxury - From $240/night</p>
+<p>Viva Wyndham V Samana - From $260/night</p>
+<h3>Must Visit</h3>
+<p>Cayo Levantado • El Limón Waterfall • Playa Rincón • Las Galeras</p>
+`;
+}
+
+if(place === "distrito"){
+content = `
+<h2>Distrito Nacional</h2>
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<h3>Top Hotels</h3>
+<p class="rating">★★★★☆ 8.7 Excellent</p>
+<p>JW Marriott Santo Domingo - From $290/night</p>
+<p>Hodelpa Nicolás de Ovando - From $180/night</p>
+<h3>Historical Sites</h3>
+<p>Zona Colonial • Catedral Primada • Faro a Colón • Los Tres Ojos • Alcázar de Colón</p>
+`;
+}
+
+document.getElementById("modalData").innerHTML = '<span class="close" onclick="closeModal()">&times;</span>' + content;
+document.getElementById("modal").style.display = "block";
 }
 
 function closeModal(){
-document.getElementById("modal").classList.remove("active");
+document.getElementById("modal").style.display = "none";
 }
 
 </script>
