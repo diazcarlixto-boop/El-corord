@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rutas Quisqueyanas | Discover Dominican Republic</title>
+<title>Rutas Quisqueyanas</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -13,7 +13,6 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
@@ -21,52 +20,15 @@ background:#f5f7fa;
 color:#222;
 }
 
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(8px);
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 50px;
-z-index:1000;
-}
-
-nav h1{ color:#fff; }
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-transition:0.3s;
-}
-
-nav a:hover{ color:#00e0ff; }
-
 .hero{
 height:100vh;
 background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
 display:flex;
+flex-direction:column;
 align-items:center;
 justify-content:center;
 text-align:center;
 color:white;
-position:relative;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-}
-
-.hero-content{
-position:relative;
-z-index:1;
 }
 
 .hero h2{
@@ -74,206 +36,109 @@ font-size:50px;
 margin-bottom:20px;
 }
 
+.categories span{
+margin:15px;
+cursor:pointer;
+font-weight:600;
+font-size:20px;
+text-decoration:underline;
+}
+
 .section{
-padding:100px 60px;
+padding:80px 40px;
+display:none;
 }
 
 .section h2{
 text-align:center;
-margin-bottom:50px;
-font-size:36px;
+margin-bottom:40px;
+font-size:32px;
 color:#0a1f44;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-transition:0.4s;
-cursor:pointer;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(0,0,0,0.25);
-}
-
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.card-content{ padding:20px; }
-
-.modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-overflow:auto;
-padding:50px;
-z-index:2000;
-}
-
-.modal-content{
-background:white;
-padding:30px;
-border-radius:15px;
-max-width:1000px;
-margin:auto;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-margin-bottom:20px;
+gap:20px;
 }
 
 .gallery img{
 width:100%;
-border-radius:10px;
-height:200px;
+height:220px;
 object-fit:cover;
-}
-
-.close{
-float:right;
-font-size:28px;
-cursor:pointer;
-}
-
-footer{
-background:#0a1f44;
-color:white;
-text-align:center;
-padding:40px;
+border-radius:12px;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-<h1>Rutas Quisqueyanas</h1>
-<div>
-<a href="#destinos">Destinations</a>
-<a href="https://wa.me/18493425653" target="_blank">WhatsApp</a>
-<a href="https://instagram.com" target="_blank">Instagram</a>
-</div>
-</nav>
-
 <section class="hero">
-<div class="hero-content">
 <h2>Explore the Dominican Republic</h2>
-<p>Beaches • Culture • Luxury • Adventure</p>
+
+<div class="categories">
+<span onclick="showSection('beaches')">Beaches</span>
+<span onclick="showSection('culture')">Culture</span>
+<span onclick="showSection('luxury')">Luxury</span>
+<span onclick="showSection('adventure')">Adventure</span>
 </div>
 </section>
 
-<section class="section" id="destinos">
-<h2>Top Destinations</h2>
-
-<div class="grid">
-
-<div class="card" onclick="openDestination('puntacana')">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
-<div class="card-content">
-<h3>Punta Cana</h3>
-<p>White sand beaches & luxury resorts</p>
-</div>
-</div>
-
-<div class="card" onclick="openDestination('samana')">
-<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4">
-<div class="card-content">
-<h3>Samaná</h3>
-<p>Waterfalls • Cayo Levantado • Nature</p>
-</div>
-</div>
-
-<div class="card" onclick="openDestination('distrito')">
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-<div class="card-content">
-<h3>Distrito Nacional</h3>
-<p>Zona Colonial • Faro a Colón • Los Tres Ojos</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<div class="modal" id="modal">
-<div class="modal-content" id="modalData">
-<span class="close" onclick="closeModal()">&times;</span>
-</div>
-</div>
-
-<footer>
-<p>© 2026 Rutas Quisqueyanas</p>
-<p>WhatsApp: +1 849 342 5653</p>
-</footer>
-
-<script>
-
-function openDestination(place){
-
-let content = "";
-
-if(place === "puntacana"){
-content = `
-<h2>Punta Cana</h2>
+<!-- BEACHES -->
+<section id="beaches" class="section">
+<h2>Top Beaches in Dominican Republic</h2>
 <div class="gallery">
 <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
-<img src="https://images.unsplash.com/photo-1526779259212-756e6d0bca91">
 <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21">
+<img src="https://images.unsplash.com/photo-1526779259212-756e6d0bca91">
 </div>
-<p>Luxury resorts, Bávaro Beach, nightlife and adventure parks.</p>
-`;
-}
+</section>
 
-if(place === "samana"){
-content = `
-<h2>Samaná</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4">
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-</div>
-<p>Cayo Levantado, El Limón waterfall, Playa Rincón and natural paradise.</p>
-`;
-}
-
-if(place === "distrito"){
-content = `
-<h2>Distrito Nacional</h2>
+<!-- CULTURE -->
+<section id="culture" class="section">
+<h2>Historical & Cultural Sites</h2>
 <div class="gallery">
 <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
 <img src="https://images.unsplash.com/photo-1526481280691-3f8f6c88b31f">
 <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92">
 </div>
-<p>Zona Colonial, historic monuments, gastronomy and modern city life.</p>
-`;
-}
+</section>
 
-document.getElementById("modalData").innerHTML =
-'<span class="close" onclick="closeModal()">&times;</span>' + content;
+<!-- LUXURY -->
+<section id="luxury" class="section">
+<h2>Luxury Hotels & Resorts</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+<img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
+</div>
+</section>
 
-document.getElementById("modal").style.display = "block";
-}
+<!-- ADVENTURE -->
+<section id="adventure" class="section">
+<h2>Adventure & Excursions</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+</div>
+</section>
 
-function closeModal(){
-document.getElementById("modal").style.display = "none";
+<script>
+
+function showSection(sectionId){
+
+// Ocultar todas
+document.querySelectorAll('.section').forEach(sec=>{
+sec.style.display = "none";
+});
+
+// Mostrar la seleccionada
+document.getElementById(sectionId).style.display = "block";
+
+// Scroll suave hacia la sección
+document.getElementById(sectionId).scrollIntoView({behavior:'smooth'});
+
 }
 
 </script>
