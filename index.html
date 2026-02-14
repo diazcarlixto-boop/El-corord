@@ -1,57 +1,289 @@
-<section class="section" id="tours" style="background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat; background-size: cover;" data-source="tours.html">
-  <!-- Este bloque hace referencia al archivo original tours.html, autorizado para integración -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rutas Quisqueyanas | Dominican Republic</title>
 
-  <h2 
-      data-en="Popular Tours" 
-      data-es="Tours Populares" 
-      data-fr="Tours Populaires"
-      style="color: white; text-align:center; text-shadow: 1px 1px 5px rgba(0,0,0,0.7); margin-bottom:50px;">
-    Popular Tours
-  </h2>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <div class="grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:30px; padding: 20px;">
+<style>
 
-    <!-- Tour 1 -->
-    <div class="card" style="background: rgba(255,255,255,0.95); border-radius:15px; overflow:hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: 0.3s;">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Punta Cana Beach" style="width:100%; height:220px; object-fit:cover;">
-      <div class="card-content" style="padding:20px;">
-        <h3 data-en="Punta Cana Luxury Experience" data-es="Experiencia de Lujo en Punta Cana" data-fr="Expérience de Luxe à Punta Cana">Punta Cana Luxury Experience</h3>
-        <p class="price" data-en="US$129 per person" data-es="US$129 por persona" data-fr="129$ par personne" style="font-weight:700; color:#0a1f44; margin:10px 0;">US$129 per person</p>
-        <p data-en="Hotel pickup • Buffet • Open bar • Certified guide • Insurance" data-es="Recogida en hotel • Buffet • Barra libre • Guía certificado • Seguro" data-fr="Prise en charge à l'hôtel • Buffet • Bar ouvert • Guide certifié • Assurance">Hotel pickup • Buffet • Open bar • Certified guide • Insurance</p>
-        <a class="btn" href="https://wa.me/18493425653" data-en="Book Now" data-es="Reservar Ahora" data-fr="Réserver Maintenant" style="display:inline-block; margin-top:15px; background:#ff7b00; color:white; padding:12px 25px; text-decoration:none; border-radius:8px; transition:0.3s;">Book Now</a>
-      </div>
-    </div>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
 
-    <!-- Tour 2 -->
-    <div class="card" style="background: rgba(255,255,255,0.95); border-radius:15px; overflow:hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: 0.3s;">
-      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4" alt="Samaná & Cayo Levantado" style="width:100%; height:220px; object-fit:cover;">
-      <div class="card-content" style="padding:20px;">
-        <h3 data-en="Samaná & Cayo Levantado" data-es="Samaná y Cayo Levantado" data-fr="Samaná & Cayo Levantado">Samaná & Cayo Levantado</h3>
-        <p class="price" data-en="US$149 per person" data-es="US$149 por persona" data-fr="149$ par personne" style="font-weight:700; color:#0a1f44; margin:10px 0;">US$149 per person</p>
-        <p data-en="Boat ride • Waterfalls • Lunch included • Small groups" data-es="Paseo en barco • Cascadas • Almuerzo incluido • Grupos pequeños" data-fr="Balade en bateau • Chutes d'eau • Déjeuner inclus • Petits groupes">Boat ride • Waterfalls • Lunch included • Small groups</p>
-        <a class="btn" href="https://wa.me/18493425653" data-en="Book Now" data-es="Reservar Ahora" data-fr="Réserver Maintenant" style="display:inline-block; margin-top:15px; background:#ff7b00; color:white; padding:12px 25px; text-decoration:none; border-radius:8px; transition:0.3s;">Book Now</a>
-      </div>
-    </div>
+body{
+background:#f5f7fa;
+color:#222;
+}
 
-    <!-- Tour 3 -->
-    <div class="card" style="background: rgba(255,255,255,0.95); border-radius:15px; overflow:hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: 0.3s;">
-      <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c" alt="Bahía de las Águilas" style="width:100%; height:220px; object-fit:cover;">
-      <div class="card-content" style="padding:20px;">
-        <h3 data-en="Bahía de las Águilas" data-es="Bahía de las Águilas" data-fr="Baie des Aigles">Bahía de las Águilas</h3>
-        <p class="price" data-en="US$165 per person" data-es="US$165 por persona" data-fr="165$ par personne" style="font-weight:700; color:#0a1f44; margin:10px 0;">US$165 per person</p>
-        <p data-en="4x4 transport • Boat access • National park • Free cancellation" data-es="Transporte 4x4 • Acceso en bote • Parque nacional • Cancelación gratuita" data-fr="Transport 4x4 • Accès en bateau • Parc national • Annulation gratuite">4x4 transport • Boat access • National park • Free cancellation</p>
-        <a class="btn" href="https://wa.me/18493425653" data-en="Book Now" data-es="Reservar Ahora" data-fr="Réserver Maintenant" style="display:inline-block; margin-top:15px; background:#ff7b00; color:white; padding:12px 25px; text-decoration:none; border-radius:8px; transition:0.3s;">Book Now</a>
-      </div>
-    </div>
+/* NAVBAR */
 
-  </div>
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(8px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 50px;
+z-index:1000;
+}
+
+nav h1{
+color:#fff;
+font-weight:700;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00e0ff;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+}
+
+.hero h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+background:#ff7b00;
+color:white;
+padding:15px 30px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#ff5500;
+}
+
+/* SECTION */
+
+.section{
+padding:100px 60px;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:50px;
+font-size:36px;
+color:#0a1f44;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.4s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.price{
+color:#00a8cc;
+font-weight:700;
+margin:10px 0;
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+
+.modal img{
+max-width:80%;
+border-radius:10px;
+}
+
+.modal.active{
+display:flex;
+}
+
+/* FOOTER */
+
+footer{
+background:#0a1f44;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<h1>Rutas Quisqueyanas</h1>
+<div>
+<a href="#hotels">Hotels</a>
+<a href="#tours">Tours</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<h2>Discover Dominican Republic</h2>
+<p>Luxury experiences, authentic culture & unforgettable beaches</p>
+<a href="#tours" class="btn">Explore Now</a>
+</div>
 </section>
 
+<section class="section" id="hotels">
+<h2>Top Hotels in Punta Cana</h2>
+<div class="grid">
+
+<div class="card" onclick="openModal(this)">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<div class="card-content">
+<h3>Luxury Beach Resort</h3>
+<p class="price">From $220/night</p>
+<p>5 stars • All inclusive • Beachfront</p>
+</div>
+</div>
+
+<div class="card" onclick="openModal(this)">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+<div class="card-content">
+<h3>Adults Only Paradise</h3>
+<p class="price">From $250/night</p>
+<p>Spa • Infinity pool • Premium service</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="tours">
+<h2>Popular Tours & Excursions</h2>
+<div class="grid">
+
+<div class="card" onclick="openModal(this)">
+<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4">
+<div class="card-content">
+<h3>Samaná & Cayo Levantado</h3>
+<p class="price">$149 per person</p>
+<p>Boat ride • Waterfalls • Lunch included</p>
+</div>
+</div>
+
+<div class="card" onclick="openModal(this)">
+<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c">
+<div class="card-content">
+<h3>Bahía de las Águilas</h3>
+<p class="price">$165 per person</p>
+<p>4x4 transport • National Park • Crystal water</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<div class="modal" id="modal" onclick="closeModal()">
+<img id="modalImg">
+</div>
+
+<footer id="contact">
+<p>© 2026 Rutas Quisqueyanas | Dominican Republic Tourism</p>
+<p>WhatsApp: +1 (849) 342-5653</p>
+</footer>
+
 <script>
-  // Ejemplo: cambia el idioma de los tours igual que el hero
-  function changeLanguage(lang) {
-    document.querySelectorAll("#tours [data-en]").forEach(el => {
-      el.textContent = el.getAttribute("data-" + lang);
-    });
-  }
+
+function openModal(card){
+const img = card.querySelector("img").src;
+document.getElementById("modalImg").src = img;
+document.getElementById("modal").classList.add("active");
+}
+
+function closeModal(){
+document.getElementById("modal").classList.remove("active");
+}
+
 </script>
+
+</body>
+</html>
