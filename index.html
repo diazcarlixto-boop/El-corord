@@ -90,6 +90,7 @@ font-weight:700;
 text-decoration:none;
 }
 
+/* SECTIONS */
 section{
 padding:100px 40px;
 }
@@ -132,6 +133,7 @@ object-fit:cover;
 padding:25px;
 }
 
+/* WHY US */
 .why{
 background:#e9f2ff;
 text-align:center;
@@ -144,6 +146,7 @@ border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
+/* MODAL */
 .modal{
 display:none;
 position:fixed;
@@ -189,6 +192,7 @@ font-size:35px;
 cursor:pointer;
 }
 
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -202,6 +206,7 @@ text-decoration:none;
 box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* FOOTER */
 footer{
 background:#001d3d;
 color:white;
@@ -230,12 +235,13 @@ padding:30px;
 <a class="btn-main" href="#luxury">Explore Destinations</a>
 </section>
 
+<!-- LUXURY -->
 <section id="luxury">
 <h2>Luxury Caribbean Destinations</h2>
 <div class="grid">
 
 <div class="card" onclick="openModal()">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800">
+<img src="pexels-ettienne-muniz-737731356-27868408.jpg">
 <div class="card-content">
 <h3>Punta Cana & Cap Cana</h3>
 <p>White sand beaches, luxury resorts, Isla Saona & exclusive marina experiences.</p>
@@ -243,7 +249,7 @@ padding:30px;
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800">
+<img src="pexels-leorossatti-2646067.jpg">
 <div class="card-content">
 <h3>Samaná & Cayo Levantado</h3>
 <p>Whale watching, waterfalls & turquoise waters in one of the most beautiful provinces of RD.</p>
@@ -251,7 +257,7 @@ padding:30px;
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800">
+<img src="pexels-vikkirillova-10899206.jpg">
 <div class="card-content">
 <h3>Bahía de las Águilas</h3>
 <p>One of the most pristine beaches in the Caribbean, located in Pedernales.</p>
@@ -261,4 +267,123 @@ padding:30px;
 </div>
 </section>
 
-<!-- El resto del código queda EXACTAMENTE igual -->
+<!-- HISTORY -->
+<section id="history">
+<h2>Historic & Cultural Experiences</h2>
+<div class="grid">
+
+<div class="card">
+<img src="pexels-flickr-149622.jpg">
+<div class="card-content">
+<h3>Zona Colonial – Santo Domingo</h3>
+<p>First cathedral of the Americas, Fortaleza Ozama & cobblestone streets full of history.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="victor-rosario-TT3GQUe6sjY-unsplash.jpg">
+<div class="card-content">
+<h3>Faro a Colón</h3>
+<p>Monument honoring Christopher Columbus, one of the most iconic landmarks in RD.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- NATURE -->
+<section id="nature">
+<h2>Mountains & Eco Adventures</h2>
+<div class="grid">
+
+<div class="card">
+<img src="pexels-talita-kriunas-2147861135-29798969 2.jpg">
+<div class="card-content">
+<h3>Pico Duarte</h3>
+<p>The highest mountain in the Caribbean. Trekking adventure in the Dominican Alps.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800">
+<div class="card-content">
+<h3>Jarabacoa</h3>
+<p>Salto Jimenoa, rafting & cool mountain weather.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800">
+<div class="card-content">
+<h3>Los Haitises National Park</h3>
+<p>Mangroves, caves & Taíno pictographs.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="why">
+<h2>Why Choose Rutas Quisqueyanas</h2>
+<div class="grid">
+<div>
+<h3>Certified Dominican Guides</h3>
+<p>Local experts passionate about our country.</p>
+</div>
+<div>
+<h3>Premium Transportation</h3>
+<p>Comfort, safety & professionalism guaranteed.</p>
+</div>
+<div>
+<h3>Authentic Experiences</h3>
+<p>We show you the real Dominican Republic.</p>
+</div>
+</div>
+</section>
+
+<!-- MODAL PUNTA CANA -->
+<div id="puntaCanaModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+
+<img src="pexels-ettienne-muniz-737731356-27868408.jpg">
+<h3>Playa Bávaro</h3>
+<p>Turquoise waters and soft white sand.</p>
+
+<img src="pexels-leorossatti-2646067.jpg">
+<h3>Luxury Resorts</h3>
+<p>All-inclusive beachfront experiences.</p>
+
+<img src="pexels-vikkirillova-10899206.jpg">
+<h3>Playa Macao</h3>
+<p>Surf & adventure in Punta Cana.</p>
+
+<img src="pexels-flickr-149622.jpg">
+<h3>Isla Saona</h3>
+<p>Natural pools and Caribbean paradise.</p>
+
+<img src="victor-rosario-TT3GQUe6sjY-unsplash.jpg">
+<h3>Cap Cana Marina</h3>
+<p>Exclusive marina with yachts and fine dining.</p>
+
+</div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/18493425653" target="_blank">Chat on WhatsApp</a>
+
+<footer>
+© 2026 Rutas Quisqueyanas – Dominican Republic Travel Experts 🇩🇴
+</footer>
+
+<script>
+function openModal(){
+document.getElementById("puntaCanaModal").style.display="flex";
+}
+function closeModal(){
+document.getElementById("puntaCanaModal").style.display="none";
+}
+</script>
+
+</body>
+</html>
