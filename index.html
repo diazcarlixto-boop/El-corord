@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rutas Quisqueyanas</title>
+<title>Rutas Quisqueyanas | Discover Dominican Republic</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -17,7 +17,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fa;
+background:#f4f8fb;
 color:#222;
 }
 
@@ -26,18 +26,18 @@ color:#222;
 position:fixed;
 top:0;
 width:100%;
-background:#0077b6;
-padding:15px 40px;
+background:#002855;
+padding:18px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
 
 .navbar h1{
 color:white;
-font-size:20px;
+font-size:22px;
 }
 
 .navbar ul{
@@ -71,27 +71,40 @@ padding-top:60px;
 }
 
 .hero h2{
-font-size:50px;
+font-size:55px;
 margin-bottom:20px;
-text-shadow:0 5px 15px rgba(0,0,0,0.4);
+text-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn-main{
+background:#d00000;
+color:white;
+padding:14px 30px;
+border-radius:8px;
+font-weight:700;
+text-decoration:none;
 }
 
 /* SECTIONS */
 section{
-padding:80px 40px;
+padding:100px 40px;
 }
 
 h2{
 text-align:center;
-margin-bottom:40px;
-font-size:32px;
-color:#0a1f44;
+margin-bottom:50px;
+font-size:36px;
+color:#002855;
 }
 
-/* TOURS GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 max-width:1200px;
 margin:auto;
@@ -99,11 +112,11 @@ margin:auto;
 
 .card{
 background:white;
-border-radius:16px;
+border-radius:18px;
 overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-transition:0.3s;
-border-top:6px solid #0077b6;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.4s;
+cursor:pointer;
 }
 
 .card:hover{
@@ -112,143 +125,265 @@ transform:translateY(-8px);
 
 .card img{
 width:100%;
-height:220px;
+height:240px;
 object-fit:cover;
 }
 
 .card-content{
-padding:20px;
+padding:25px;
 }
 
-.price{
-font-weight:700;
-color:#0077b6;
-margin:10px 0;
-}
-
-.btn{
-display:inline-block;
-margin-top:15px;
-padding:10px 20px;
-background:#0077b6;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#023e8a;
-}
-
-/* REVIEWS */
-.reviews{
-max-width:900px;
-margin:auto;
+/* WHY US */
+.why{
+background:#e9f2ff;
 text-align:center;
 }
 
-.review{
+.why .grid div{
 background:white;
-padding:20px;
-margin:15px 0;
-border-radius:12px;
+padding:30px;
+border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* CONTACT */
-.contact{
-text-align:center;
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+z-index:2000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+padding:40px;
+overflow:auto;
 }
 
+.modal-content{
+max-width:900px;
+width:100%;
+}
+
+.modal img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.modal h3{
+color:white;
+margin-bottom:5px;
+}
+
+.modal p{
+color:#ddd;
+margin-bottom:25px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:40px;
+color:white;
+font-size:35px;
+cursor:pointer;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
 footer{
-background:#0a1f44;
+background:#001d3d;
 color:white;
 text-align:center;
-padding:20px;
-margin-top:40px;
+padding:30px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
-<h1>Rutas Quisqueyanas</h1>
+<h1>Rutas Quisqueyanas 🇩🇴</h1>
 <ul>
 <li><a href="#home">Home</a></li>
-<li><a href="#tours">Tours</a></li>
-<li><a href="#reviews">Reviews</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#luxury">Luxury</a></li>
+<li><a href="#history">History</a></li>
+<li><a href="#nature">Nature</a></li>
+<li><a href="#why">Why Us</a></li>
 </ul>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="home">
-<h2>Explore the Dominican Republic</h2>
+<h2>Experience the Authentic Dominican Republic</h2>
+<p>Luxury Beaches • Colonial History • Caribbean Nature</p>
+<a class="btn-main" href="#luxury">Explore Destinations</a>
 </section>
 
-<!-- TOURS -->
-<section id="tours">
-<h2>Popular Tours</h2>
+<!-- LUXURY -->
+<section id="luxury">
+<h2>Luxury Caribbean Destinations</h2>
+<div class="grid">
 
+<div class="card" onclick="openModal()">
+<img src="pexels-ettienne-muniz-737731356-27868408.jpg">
+<div class="card-content">
+<h3>Punta Cana & Cap Cana</h3>
+<p>White sand beaches, luxury resorts, Isla Saona & exclusive marina experiences.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="pexels-leorossatti-2646067.jpg">
+<div class="card-content">
+<h3>Samaná & Cayo Levantado</h3>
+<p>Whale watching, waterfalls & turquoise waters in one of the most beautiful provinces of RD.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="pexels-vikkirillova-10899206.jpg">
+<div class="card-content">
+<h3>Bahía de las Águilas</h3>
+<p>One of the most pristine beaches in the Caribbean, located in Pedernales.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- HISTORY -->
+<section id="history">
+<h2>Historic & Cultural Experiences</h2>
 <div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800">
+<img src="pexels-flickr-149622.jpg">
 <div class="card-content">
-<h3>Punta Cana Luxury Experience</h3>
-<p class="price">US$129 per person</p>
-<p>Hotel pickup • Buffet • Open bar • Certified guide • Insurance</p>
-<a class="btn" href="https://wa.me/18493425653">Book Now</a>
+<h3>Zona Colonial – Santo Domingo</h3>
+<p>First cathedral of the Americas, Fortaleza Ozama & cobblestone streets full of history.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800">
+<img src="victor-rosario-TT3GQUe6sjY-unsplash.jpg">
 <div class="card-content">
-<h3>Samaná & Cayo Levantado</h3>
-<p class="price">US$149 per person</p>
-<p>Boat ride • Waterfalls • Lunch included • Small groups</p>
-<a class="btn" href="https://wa.me/18493425653">Book Now</a>
+<h3>Faro a Colón</h3>
+<p>Monument honoring Christopher Columbus, one of the most iconic landmarks in RD.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- NATURE -->
+<section id="nature">
+<h2>Mountains & Eco Adventures</h2>
+<div class="grid">
+
+<div class="card">
+<img src="pexels-talita-kriunas-2147861135-29798969 2.jpg">
+<div class="card-content">
+<h3>Pico Duarte</h3>
+<p>The highest mountain in the Caribbean. Trekking adventure in the Dominican Alps.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?w=800">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800">
 <div class="card-content">
-<h3>Bahía de las Águilas</h3>
-<p class="price">US$165 per person</p>
-<p>4x4 transport • Boat access • National park • Free cancellation</p>
-<a class="btn" href="https://wa.me/18493425653">Book Now</a>
+<h3>Jarabacoa</h3>
+<p>Salto Jimenoa, rafting & cool mountain weather.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800">
+<div class="card-content">
+<h3>Los Haitises National Park</h3>
+<p>Mangroves, caves & Taíno pictographs.</p>
 </div>
 </div>
 
 </div>
 </section>
 
-<!-- REVIEWS -->
-<section id="reviews">
-<h2>Customer Reviews</h2>
-<div class="reviews">
-<div class="review">⭐️⭐️⭐️⭐️⭐️ Amazing experience in Punta Cana! – Michael (USA)</div>
-<div class="review">⭐️⭐️⭐️⭐️⭐️ Perfect organization and great guides! – Sophie (France)</div>
-<div class="review">⭐️⭐️⭐️⭐️⭐️ Best excursion in Dominican Republic! – Carlos (Spain)</div>
+<!-- WHY US -->
+<section id="why" class="why">
+<h2>Why Choose Rutas Quisqueyanas</h2>
+<div class="grid">
+<div>
+<h3>Certified Dominican Guides</h3>
+<p>Local experts passionate about our country.</p>
+</div>
+<div>
+<h3>Premium Transportation</h3>
+<p>Comfort, safety & professionalism guaranteed.</p>
+</div>
+<div>
+<h3>Authentic Experiences</h3>
+<p>We show you the real Dominican Republic.</p>
+</div>
 </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-<h2>Contact Us</h2>
-<p>WhatsApp: +1 (849) 342-5653</p>
-<p>Email: info@rutasquisqueyanas.com</p>
-</section>
+<!-- MODAL PUNTA CANA -->
+<div id="puntaCanaModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+
+<img src="pexels-ettienne-muniz-737731356-27868408.jpg">
+<h3>Playa Bávaro</h3>
+<p>Turquoise waters and soft white sand.</p>
+
+<img src="pexels-leorossatti-2646067.jpg">
+<h3>Luxury Resorts</h3>
+<p>All-inclusive beachfront experiences.</p>
+
+<img src="pexels-vikkirillova-10899206.jpg">
+<h3>Playa Macao</h3>
+<p>Surf & adventure in Punta Cana.</p>
+
+<img src="pexels-flickr-149622.jpg">
+<h3>Isla Saona</h3>
+<p>Natural pools and Caribbean paradise.</p>
+
+<img src="victor-rosario-TT3GQUe6sjY-unsplash.jpg">
+<h3>Cap Cana Marina</h3>
+<p>Exclusive marina with yachts and fine dining.</p>
+
+</div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/18493425653" target="_blank">Chat on WhatsApp</a>
 
 <footer>
-© 2026 Rutas Quisqueyanas – All Rights Reserved
+© 2026 Rutas Quisqueyanas – Dominican Republic Travel Experts 🇩🇴
 </footer>
+
+<script>
+function openModal(){
+document.getElementById("puntaCanaModal").style.display="flex";
+}
+function closeModal(){
+document.getElementById("puntaCanaModal").style.display="none";
+}
+</script>
 
 </body>
 </html>
