@@ -1,227 +1,386 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>El Corord - Turismo en República Dominicana</title>
+<title>Rutas Quisqueyanas | Discover Dominican Republic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
-body {
-  background-color: #f4f4f4;
+body{
+background:#f4f8fb;
+color:#222;
 }
 
-/* HEADER */
-header {
-  background: #0a3d62;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:#002855;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
+.navbar h1{
+color:white;
+font-size:22px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.navbar ul{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.navbar a:hover{
+opacity:0.8;
 }
 
 /* HERO */
-.hero {
-  background: linear-gradient(to right, #1e3799, #0a3d62);
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding-top:60px;
 }
 
-.hero h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
+.hero h2{
+font-size:55px;
+margin-bottom:20px;
+text-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 
-/* DESTINOS */
-.destinos {
-  padding: 50px 20px;
-  text-align: center;
+.hero p{
+font-size:20px;
+margin-bottom:30px;
 }
 
-.destinos h2 {
-  margin-bottom: 30px;
-  font-size: 28px;
+.btn-main{
+background:#d00000;
+color:white;
+padding:14px 30px;
+border-radius:8px;
+font-weight:700;
+text-decoration:none;
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+/* SECTIONS */
+section{
+padding:100px 40px;
 }
 
-.card {
-  background: white;
-  width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+h2{
+text-align:center;
+margin-bottom:50px;
+font-size:36px;
+color:#002855;
 }
 
-.card:hover {
-  transform: scale(1.05);
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
 }
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.4s;
+cursor:pointer;
 }
 
-.card-content {
-  padding: 20px;
+.card:hover{
+transform:translateY(-8px);
 }
 
-.card-content h3 {
-  margin-bottom: 10px;
+.card img{
+width:100%;
+height:240px;
+object-fit:cover;
 }
 
-.precio {
-  font-weight: bold;
-  color: #0a3d62;
-  margin-top: 10px;
+.card-content{
+padding:25px;
 }
 
-/* CONTACTO */
-.contacto {
-  background: #dff9fb;
-  padding: 50px 20px;
-  text-align: center;
+.price{
+font-weight:700;
+margin:10px 0;
+color:#d00000;
 }
 
-.contacto h2 {
-  margin-bottom: 20px;
+.btn{
+display:inline-block;
+margin-top:10px;
+background:#002855;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* WHY */
+.why{
+background:#e9f2ff;
+text-align:center;
+}
+
+.why .grid div{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+z-index:2000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+padding:40px;
+overflow:auto;
+}
+
+.modal-content{
+max-width:900px;
+width:100%;
+}
+
+.modal img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+.modal h3{
+color:white;
+margin-bottom:5px;
+}
+
+.modal p{
+color:#ddd;
+margin-bottom:25px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:40px;
+color:white;
+font-size:35px;
+cursor:pointer;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
-footer {
-  background: #0a3d62;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-/* BOTÓN */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #0a3d62;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #1e3799;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .grid {
-    flex-direction: column;
-    align-items: center;
-  }
+footer{
+background:#001d3d;
+color:white;
+text-align:center;
+padding:30px;
 }
 </style>
-
 </head>
+
 <body>
 
-<header>
-  <h1>El Corord</h1>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#destinos">Destinos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
+<div class="navbar">
+<h1>Rutas Quisqueyanas 🇩🇴</h1>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#luxury">Luxury</a></li>
+<li><a href="#history">History</a></li>
+<li><a href="#nature">Nature</a></li>
+<li><a href="#why">Why Us</a></li>
+</ul>
+</div>
 
-<section class="hero" id="inicio">
-  <h2>Descubre la belleza de la República Dominicana</h2>
-  <p>Playas paradisíacas, cultura vibrante y experiencias inolvidables.</p>
-  <a href="#destinos" class="btn">Explorar destinos</a>
+<section class="hero" id="home">
+<h2>Experience the Authentic Dominican Republic</h2>
+<p>Luxury Beaches • Colonial History • Caribbean Nature</p>
+<a class="btn-main" href="#luxury">Explore Destinations</a>
 </section>
 
-<section class="destinos" id="destinos">
-  <h2>Destinos Populares</h2>
+<!-- LUXURY -->
+<section id="luxury">
+<h2>Luxury Caribbean Destinations</h2>
+<div class="grid">
 
-  <div class="grid">
+<div class="card" onclick="openModal()">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Punta Cana">
+<div class="card-content">
+<h3>Punta Cana Luxury Experience</h3>
+<p class="price">US$129 per person</p>
+<p>Hotel pickup • Buffet • Open bar • Certified guide • Insurance</p>
+<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="imagen/punta-cana.jpg" alt="Punta Cana">
-      <div class="card-content">
-        <h3>Punta Cana</h3>
-        <p>Resorts todo incluido y playas de arena blanca.</p>
-        <p class="precio">Desde US$299</p>
-      </div>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4" alt="Samaná">
+<div class="card-content">
+<h3>Samaná & Cayo Levantado</h3>
+<p class="price">US$149 per person</p>
+<p>Boat ride • Waterfalls • Lunch included • Small groups</p>
+<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="imagen/santo-domingo.jpg" alt="Santo Domingo">
-      <div class="card-content">
-        <h3>Santo Domingo</h3>
-        <p>Historia y cultura en la Zona Colonial.</p>
-        <p class="precio">Desde US$149</p>
-      </div>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c" alt="Bahía de las Águilas">
+<div class="card-content">
+<h3>Bahía de las Águilas</h3>
+<p class="price">US$165 per person</p>
+<p>4x4 transport • Boat access • National park • Free cancellation</p>
+<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="imagen/samana.jpg" alt="Samaná">
-      <div class="card-content">
-        <h3>Samaná</h3>
-        <p>Naturaleza impresionante y aventura ecológica.</p>
-        <p class="precio">Desde US$199</p>
-      </div>
-    </div>
-
-  </div>
+</div>
 </section>
 
-<section class="contacto" id="contacto">
-  <h2>Contáctanos</h2>
-  <p>Email: info@elcorord.com</p>
-  <p>Teléfono: +1 809-000-0000</p>
+<!-- HISTORY -->
+<section id="history">
+<h2>Historic & Cultural Experiences</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605130284535-11dd9eedc58a" alt="Zona Colonial">
+<div class="card-content">
+<h3>Zona Colonial – Santo Domingo</h3>
+<p>First cathedral of the Americas & cobblestone streets full of history.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1587502537104-8c2c6c7e0b4f" alt="Faro a Colón">
+<div class="card-content">
+<h3>Faro a Colón</h3>
+<p>One of the most iconic landmarks in the Dominican Republic.</p>
+</div>
+</div>
+
+</div>
 </section>
+
+<!-- NATURE -->
+<section id="nature">
+<h2>Mountains & Eco Adventures</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Pico Duarte">
+<div class="card-content">
+<h3>Pico Duarte</h3>
+<p>The highest mountain in the Caribbean.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Jarabacoa">
+<div class="card-content">
+<h3>Jarabacoa</h3>
+<p>Salto Jimenoa, rafting & cool mountain weather.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="why">
+<h2>Why Choose Rutas Quisqueyanas</h2>
+<div class="grid">
+<div>
+<h3>Certified Dominican Guides</h3>
+<p>Local experts passionate about our country.</p>
+</div>
+<div>
+<h3>Premium Transportation</h3>
+<p>Comfort, safety & professionalism guaranteed.</p>
+</div>
+<div>
+<h3>Authentic Experiences</h3>
+<p>We show you the real Dominican Republic.</p>
+</div>
+</div>
+</section>
+
+<!-- MODAL -->
+<div id="puntaCanaModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<div class="modal-content">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<h3>Punta Cana Experience</h3>
+<p>Turquoise waters, luxury resorts and unforgettable Caribbean sunsets.</p>
+</div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/18493425653" target="_blank">Chat on WhatsApp</a>
 
 <footer>
-  <p>© 2026 El Corord - República Dominicana</p>
+© 2026 Rutas Quisqueyanas – Dominican Republic Travel Experts 🇩🇴
 </footer>
 
 <script>
-console.log("El Corord cargado correctamente");
+function openModal(){
+document.getElementById("puntaCanaModal").style.display="flex";
+}
 
-// Pequeño efecto suave al hacer clic en menú
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
-    });
-  });
-});
+function closeModal(){
+document.getElementById("puntaCanaModal").style.display="none";
+}
 </script>
 
 </body>
