@@ -50,6 +50,11 @@ gap:25px;
 color:white;
 text-decoration:none;
 font-weight:500;
+transition:0.3s;
+}
+
+.navbar a:hover{
+opacity:0.8;
 }
 
 /* HERO */
@@ -71,6 +76,11 @@ margin-bottom:20px;
 text-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
 .btn-main{
 background:#d00000;
 color:white;
@@ -83,6 +93,14 @@ text-decoration:none;
 /* SECTIONS */
 section{
 padding:100px 40px;
+opacity:0;
+transform:translateY(30px);
+transition:0.8s ease;
+}
+
+section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 h2{
@@ -129,6 +147,30 @@ margin:10px 0;
 color:#d00000;
 }
 
+.btn{
+display:inline-block;
+margin-top:10px;
+background:#002855;
+color:white;
+padding:10px 18px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* WHY */
+.why{
+background:#e9f2ff;
+text-align:center;
+}
+
+.why .grid div{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
 /* MODAL */
 .modal{
 display:none;
@@ -141,60 +183,45 @@ height:100%;
 background:rgba(0,0,0,0.9);
 justify-content:center;
 align-items:center;
-padding:20px;
+padding:40px;
 }
 
 .modal-content{
-background:white;
+background:#111;
 padding:30px;
 border-radius:20px;
-max-width:600px;
+max-width:900px;
 width:100%;
+text-align:center;
 position:relative;
 }
 
 .modal img{
 width:100%;
 border-radius:15px;
-margin-bottom:15px;
+margin-bottom:20px;
 }
 
 .modal h3{
+color:white;
 margin-bottom:10px;
 }
 
 .modal p{
-margin-bottom:15px;
-}
-
-.modal input{
-width:100%;
-padding:10px;
-margin-bottom:12px;
-border-radius:6px;
-border:1px solid #ccc;
-}
-
-.reserve-btn{
-background:#25D366;
-color:white;
-padding:12px;
-width:100%;
-border:none;
-border-radius:6px;
-font-weight:600;
-cursor:pointer;
+color:#ddd;
+margin-bottom:20px;
 }
 
 .close{
 position:absolute;
-top:10px;
-right:15px;
-font-size:25px;
+top:15px;
+right:20px;
+color:white;
+font-size:30px;
 cursor:pointer;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -205,6 +232,7 @@ padding:15px 20px;
 border-radius:50px;
 font-weight:600;
 text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
 /* FOOTER */
@@ -222,54 +250,118 @@ padding:30px;
 <div class="navbar">
 <h1>Rutas Quisqueyanas 🇩🇴</h1>
 <ul>
+<li><a href="#home">Home</a></li>
 <li><a href="#luxury">Luxury</a></li>
 <li><a href="#history">History</a></li>
 <li><a href="#nature">Nature</a></li>
+<li><a href="#why">Why Us</a></li>
 </ul>
 </div>
 
-<section class="hero">
+<section class="hero" id="home">
 <h2>Experience the Authentic Dominican Republic</h2>
-<a class="btn-main" href="#luxury">Explore Tours</a>
+<p>Luxury Beaches • Colonial History • Caribbean Nature</p>
+<a class="btn-main" href="#luxury">Explore Destinations</a>
 </section>
 
+<!-- LUXURY -->
 <section id="luxury">
 <h2>Luxury Caribbean Destinations</h2>
 <div class="grid">
 
-<div class="card" onclick="openModal('Punta Cana Luxury Experience','US$129 per person','https://images.unsplash.com/photo-1507525428034-b723cf961d3e')">
+<div class="card" onclick="openModal('Punta Cana Luxury Experience','Turquoise waters, 5-star resorts and premium Caribbean vibes.','https://images.unsplash.com/photo-1507525428034-b723cf961d3e')">
 <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 <div class="card-content">
-<h3>Punta Cana</h3>
+<h3>Punta Cana Luxury Experience</h3>
 <p class="price">US$129 per person</p>
+<p>Hotel pickup • Buffet • Open bar • Certified guide • Insurance</p>
 </div>
 </div>
 
-<div class="card" onclick="openModal('Samaná & Cayo Levantado','US$149 per person','https://images.unsplash.com/photo-1537996194471-e657df975ab4')">
+<div class="card" onclick="openModal('Samaná & Cayo Levantado','Crystal clear waters, waterfalls and paradise island experience.','https://images.unsplash.com/photo-1537996194471-e657df975ab4')">
 <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4">
 <div class="card-content">
-<h3>Samaná</h3>
+<h3>Samaná & Cayo Levantado</h3>
 <p class="price">US$149 per person</p>
+<p>Boat ride • Lunch included • Small groups</p>
+</div>
+</div>
+
+<div class="card" onclick="openModal('Bahía de las Águilas','One of the most pristine beaches in the Caribbean.','https://images.unsplash.com/photo-1526779259212-939e64788e3c')">
+<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c">
+<div class="card-content">
+<h3>Bahía de las Águilas</h3>
+<p class="price">US$165 per person</p>
+<p>4x4 transport • National park • Boat access</p>
 </div>
 </div>
 
 </div>
 </section>
 
-<!-- MODAL -->
-<div id="modal" class="modal">
-<div class="modal-content">
+<!-- HISTORY -->
+<section id="history">
+<h2>Historic & Cultural Experiences</h2>
+<div class="grid">
+
+<div class="card" onclick="openModal('Zona Colonial – Santo Domingo','Walk through the first city of the Americas.','https://images.unsplash.com/photo-1605130284535-11dd9eedc58a')">
+<img src="https://images.unsplash.com/photo-1605130284535-11dd9eedc58a">
+<div class="card-content">
+<h3>Zona Colonial</h3>
+<p>First cathedral of the Americas.</p>
+</div>
+</div>
+
+<div class="card" onclick="openModal('Faro a Colón','Iconic monument honoring Christopher Columbus.','https://upload.wikimedia.org/wikipedia/commons/3/32/Faro_a_Col%C3%B3n_Santo_Domingo.jpg')">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Faro_a_Col%C3%B3n_Santo_Domingo.jpg">
+<div class="card-content">
+<h3>Faro a Colón</h3>
+<p>Historic landmark in Santo Domingo.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- NATURE -->
+<section id="nature">
+<h2>Mountains & Eco Adventures</h2>
+<div class="grid">
+
+<div class="card" onclick="openModal('Pico Duarte','The highest mountain in the Caribbean.','https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800')">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800">
+<div class="card-content">
+<h3>Pico Duarte</h3>
+<p>Caribbean summit adventure.</p>
+</div>
+</div>
+
+<div class="card" onclick="openModal('Jarabacoa','Waterfalls, rafting and fresh mountain air.','https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<div class="card-content">
+<h3>Jarabacoa</h3>
+<p>Adventure and eco tourism.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="why" class="why">
+<h2>Why Choose Us</h2>
+<div class="grid">
+<div><h3>Certified Dominican Guides</h3></div>
+<div><h3>Premium Transportation</h3></div>
+<div><h3>Authentic Experiences</h3></div>
+</div>
+</section>
+
+<div id="modal" class="modal" onclick="closeModal()">
+<div class="modal-content" onclick="event.stopPropagation()">
 <span class="close" onclick="closeModal()">&times;</span>
 <img id="modalImg">
 <h3 id="modalTitle"></h3>
-<p id="modalPrice"></p>
-
-<input type="text" id="clientName" placeholder="Your Name">
-<input type="date" id="tourDate">
-<input type="number" id="peopleCount" placeholder="Number of People">
-
-<button class="reserve-btn" onclick="sendWhatsApp()">Reserve via WhatsApp</button>
-
+<p id="modalText"></p>
 </div>
 </div>
 
@@ -280,34 +372,24 @@ padding:30px;
 </footer>
 
 <script>
-let selectedTour = "";
-
-function openModal(title,price,img){
+function openModal(title,text,img){
 document.getElementById("modal").style.display="flex";
 document.getElementById("modalTitle").innerText=title;
-document.getElementById("modalPrice").innerText=price;
+document.getElementById("modalText").innerText=text;
 document.getElementById("modalImg").src=img;
-selectedTour = title + " - " + price;
 }
 
 function closeModal(){
 document.getElementById("modal").style.display="none";
 }
 
-function sendWhatsApp(){
-let name = document.getElementById("clientName").value;
-let date = document.getElementById("tourDate").value;
-let people = document.getElementById("peopleCount").value;
-
-if(name === "" || date === "" || people === ""){
-alert("Please complete all fields");
-return;
+window.addEventListener("scroll",function(){
+document.querySelectorAll("section").forEach(sec=>{
+if(sec.getBoundingClientRect().top<window.innerHeight-100){
+sec.classList.add("visible");
 }
-
-let message = `Hello, my name is ${name}. I want to book ${selectedTour} for ${people} people on ${date}.`;
-let url = "https://wa.me/18493425653?text=" + encodeURIComponent(message);
-window.open(url, "_blank");
-}
+});
+});
 </script>
 
 </body>
