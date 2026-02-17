@@ -190,6 +190,7 @@ overflow:auto;
 .modal-content{
 max-width:900px;
 width:100%;
+color:white;
 }
 
 .modal img{
@@ -199,7 +200,6 @@ margin-bottom:15px;
 }
 
 .modal h3{
-color:white;
 margin-bottom:5px;
 }
 
@@ -214,6 +214,34 @@ top:20px;
 right:40px;
 color:white;
 font-size:35px;
+cursor:pointer;
+}
+
+/* FORM */
+.booking-form{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
+color:black;
+}
+
+.booking-form input{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+.booking-form button{
+width:100%;
+background:#25D366;
+color:white;
+padding:12px;
+border:none;
+border-radius:6px;
+font-weight:600;
 cursor:pointer;
 }
 
@@ -260,7 +288,6 @@ padding:30px;
 <a class="btn-main" href="#luxury">Explore Destinations</a>
 </section>
 
-<!-- LUXURY -->
 <section id="luxury">
 <h2>Luxury Caribbean Destinations</h2>
 <div class="grid">
@@ -271,34 +298,13 @@ padding:30px;
 <h3>Punta Cana Luxury Experience</h3>
 <p class="price">US$129 per person</p>
 <p>Hotel pickup • Buffet • Open bar • Certified guide • Insurance</p>
-<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4" alt="Samaná">
-<div class="card-content">
-<h3>Samaná & Cayo Levantado</h3>
-<p class="price">US$149 per person</p>
-<p>Boat ride • Waterfalls • Lunch included • Small groups</p>
-<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c" alt="Bahía de las Águilas">
-<div class="card-content">
-<h3>Bahía de las Águilas</h3>
-<p class="price">US$165 per person</p>
-<p>4x4 transport • Boat access • National park • Free cancellation</p>
-<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
+<a class="btn" href="#">Book Now</a>
 </div>
 </div>
 
 </div>
 </section>
 
-<!-- HISTORY -->
 <section id="history">
 <h2>Historic & Cultural Experiences</h2>
 <div class="grid">
@@ -322,55 +328,20 @@ padding:30px;
 </div>
 </section>
 
-<!-- NATURE -->
-<section id="nature">
-<h2>Mountains & Eco Adventures</h2>
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Pico Duarte">
-<div class="card-content">
-<h3>Pico Duarte</h3>
-<p>The highest mountain in the Caribbean.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Jarabacoa">
-<div class="card-content">
-<h3>Jarabacoa</h3>
-<p>Salto Jimenoa, rafting & cool mountain weather.</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- WHY -->
-<section id="why" class="why">
-<h2>Why Choose Rutas Quisqueyanas</h2>
-<div class="grid">
-<div>
-<h3>Certified Dominican Guides</h3>
-<p>Local experts passionate about our country.</p>
-</div>
-<div>
-<h3>Premium Transportation</h3>
-<p>Comfort, safety & professionalism guaranteed.</p>
-</div>
-<div>
-<h3>Authentic Experiences</h3>
-<p>We show you the real Dominican Republic.</p>
-</div>
-</div>
-</section>
-
-<div id="puntaCanaModal" class="modal" onclick="closeModal()">
-<span class="close">&times;</span>
+<div id="puntaCanaModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
 <div class="modal-content">
 <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 <h3>Punta Cana Experience</h3>
 <p>Turquoise waters, luxury resorts and unforgettable Caribbean sunsets.</p>
+
+<div class="booking-form">
+<input type="text" id="name" placeholder="Your Name">
+<input type="date" id="date">
+<input type="number" id="people" placeholder="Number of People">
+<button onclick="sendBooking()">Reserve via WhatsApp</button>
+</div>
+
 </div>
 </div>
 
@@ -389,14 +360,15 @@ function closeModal(){
 document.getElementById("puntaCanaModal").style.display="none";
 }
 
-window.addEventListener("scroll", function(){
-document.querySelectorAll("section").forEach(sec=>{
-const position=sec.getBoundingClientRect().top;
-if(position<window.innerHeight-100){
-sec.classList.add("visible");
+function sendBooking(){
+var name=document.getElementById("name").value;
+var date=document.getElementById("date").value;
+var people=document.getElementById("people").value;
+
+var message="Hello! I want to book Punta Cana.%0AName: "+name+"%0ADate: "+date+"%0APeople: "+people;
+
+window.open("https://wa.me/18493425653?text="+message,"_blank");
 }
-});
-});
 </script>
 
 </body>
