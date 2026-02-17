@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rutas Quisqueyanas | Dominican Republic Travel Experts</title>
+<title>Rutas Quisqueyanas | Discover Dominican Republic</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -184,40 +184,36 @@ background:rgba(0,0,0,0.9);
 justify-content:center;
 align-items:center;
 padding:40px;
+overflow:auto;
 }
 
 .modal-content{
-background:#111;
-padding:30px;
-border-radius:20px;
 max-width:900px;
 width:100%;
-text-align:center;
-position:relative;
 }
 
 .modal img{
 width:100%;
 border-radius:15px;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 .modal h3{
 color:white;
-margin-bottom:10px;
+margin-bottom:5px;
 }
 
 .modal p{
 color:#ddd;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .close{
 position:absolute;
-top:15px;
-right:20px;
+top:20px;
+right:40px;
 color:white;
-font-size:30px;
+font-size:35px;
 cursor:pointer;
 }
 
@@ -269,30 +265,33 @@ padding:30px;
 <h2>Luxury Caribbean Destinations</h2>
 <div class="grid">
 
-<div class="card" onclick="openModal('Punta Cana Luxury Experience','Turquoise waters, 5-star resorts and premium Caribbean vibes.','https://images.unsplash.com/photo-1507525428034-b723cf961d3e')">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<div class="card" onclick="openModal()">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Punta Cana">
 <div class="card-content">
 <h3>Punta Cana Luxury Experience</h3>
 <p class="price">US$129 per person</p>
 <p>Hotel pickup • Buffet • Open bar • Certified guide • Insurance</p>
+<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
 </div>
 </div>
 
-<div class="card" onclick="openModal('Samaná & Cayo Levantado','Crystal clear waters, waterfalls and paradise island experience.','https://images.unsplash.com/photo-1537996194471-e657df975ab4')">
-<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4" alt="Samaná">
 <div class="card-content">
 <h3>Samaná & Cayo Levantado</h3>
 <p class="price">US$149 per person</p>
-<p>Boat ride • Lunch included • Small groups</p>
+<p>Boat ride • Waterfalls • Lunch included • Small groups</p>
+<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
 </div>
 </div>
 
-<div class="card" onclick="openModal('Bahía de las Águilas','One of the most pristine beaches in the Caribbean.','https://images.unsplash.com/photo-1526779259212-939e64788e3c')">
-<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c" alt="Bahía de las Águilas">
 <div class="card-content">
 <h3>Bahía de las Águilas</h3>
 <p class="price">US$165 per person</p>
-<p>4x4 transport • National park • Boat access</p>
+<p>4x4 transport • Boat access • National park • Free cancellation</p>
+<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
 </div>
 </div>
 
@@ -304,19 +303,19 @@ padding:30px;
 <h2>Historic & Cultural Experiences</h2>
 <div class="grid">
 
-<div class="card" onclick="openModal('Zona Colonial – Santo Domingo','Walk through the first city of the Americas.','https://images.unsplash.com/photo-1605130284535-11dd9eedc58a')">
-<img src="https://images.unsplash.com/photo-1605130284535-11dd9eedc58a">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1605130284535-11dd9eedc58a" alt="Zona Colonial">
 <div class="card-content">
-<h3>Zona Colonial</h3>
-<p>First cathedral of the Americas.</p>
+<h3>Zona Colonial – Santo Domingo</h3>
+<p>First cathedral of the Americas & cobblestone streets full of history.</p>
 </div>
 </div>
 
-<div class="card" onclick="openModal('Faro a Colón','Iconic monument honoring Christopher Columbus.','https://upload.wikimedia.org/wikipedia/commons/3/32/Faro_a_Col%C3%B3n_Santo_Domingo.jpg')">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Faro_a_Col%C3%B3n_Santo_Domingo.jpg">
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Faro_a_Col%C3%B3n_Santo_Domingo.jpg" alt="Faro a Colón">
 <div class="card-content">
 <h3>Faro a Colón</h3>
-<p>Historic landmark in Santo Domingo.</p>
+<p>One of the most iconic landmarks in the Dominican Republic.</p>
 </div>
 </div>
 
@@ -328,40 +327,50 @@ padding:30px;
 <h2>Mountains & Eco Adventures</h2>
 <div class="grid">
 
-<div class="card" onclick="openModal('Pico Duarte','The highest mountain in the Caribbean.','https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800')">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Pico Duarte">
 <div class="card-content">
 <h3>Pico Duarte</h3>
-<p>Caribbean summit adventure.</p>
+<p>The highest mountain in the Caribbean.</p>
 </div>
 </div>
 
-<div class="card" onclick="openModal('Jarabacoa','Waterfalls, rafting and fresh mountain air.','https://images.unsplash.com/photo-1501785888041-af3ef285b470')">
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Jarabacoa">
 <div class="card-content">
 <h3>Jarabacoa</h3>
-<p>Adventure and eco tourism.</p>
+<p>Salto Jimenoa, rafting & cool mountain weather.</p>
 </div>
 </div>
 
 </div>
 </section>
 
+<!-- WHY -->
 <section id="why" class="why">
-<h2>Why Choose Us</h2>
+<h2>Why Choose Rutas Quisqueyanas</h2>
 <div class="grid">
-<div><h3>Certified Dominican Guides</h3></div>
-<div><h3>Premium Transportation</h3></div>
-<div><h3>Authentic Experiences</h3></div>
+<div>
+<h3>Certified Dominican Guides</h3>
+<p>Local experts passionate about our country.</p>
+</div>
+<div>
+<h3>Premium Transportation</h3>
+<p>Comfort, safety & professionalism guaranteed.</p>
+</div>
+<div>
+<h3>Authentic Experiences</h3>
+<p>We show you the real Dominican Republic.</p>
+</div>
 </div>
 </section>
 
-<div id="modal" class="modal" onclick="closeModal()">
-<div class="modal-content" onclick="event.stopPropagation()">
-<span class="close" onclick="closeModal()">&times;</span>
-<img id="modalImg">
-<h3 id="modalTitle"></h3>
-<p id="modalText"></p>
+<div id="puntaCanaModal" class="modal" onclick="closeModal()">
+<span class="close">&times;</span>
+<div class="modal-content">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<h3>Punta Cana Experience</h3>
+<p>Turquoise waters, luxury resorts and unforgettable Caribbean sunsets.</p>
 </div>
 </div>
 
@@ -372,20 +381,18 @@ padding:30px;
 </footer>
 
 <script>
-function openModal(title,text,img){
-document.getElementById("modal").style.display="flex";
-document.getElementById("modalTitle").innerText=title;
-document.getElementById("modalText").innerText=text;
-document.getElementById("modalImg").src=img;
+function openModal(){
+document.getElementById("puntaCanaModal").style.display="flex";
 }
 
 function closeModal(){
-document.getElementById("modal").style.display="none";
+document.getElementById("puntaCanaModal").style.display="none";
 }
 
-window.addEventListener("scroll",function(){
+window.addEventListener("scroll", function(){
 document.querySelectorAll("section").forEach(sec=>{
-if(sec.getBoundingClientRect().top<window.innerHeight-100){
+const position=sec.getBoundingClientRect().top;
+if(position<window.innerHeight-100){
 sec.classList.add("visible");
 }
 });
