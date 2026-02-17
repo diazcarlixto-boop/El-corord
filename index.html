@@ -1,138 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Corord - Turismo en República Dominicana</title>
 
-<title>Rutas Quisqueyanas | Luxury Tours in Dominican Republic</title>
-<meta name="description" content="Luxury tours in Punta Cana, Samaná, Zona Colonial and more. Discover the authentic Dominican Republic with certified local guides.">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-<link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+body {
+  background-color: #f4f4f4;
+}
+
+/* HEADER */
+header {
+  background: #0a3d62;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(to right, #1e3799, #0a3d62);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* DESTINOS */
+.destinos {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.destinos h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #0a3d62;
+  margin-top: 10px;
+}
+
+/* CONTACTO */
+.contacto {
+  background: #dff9fb;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contacto h2 {
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* BOTÓN */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #0a3d62;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #1e3799;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
 </head>
-
 <body>
 
-<header class="navbar">
-<h1>Rutas Quisqueyanas 🇩🇴</h1>
-
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-<nav>
-<ul id="menu">
-<li><a href="#home">Home</a></li>
-<li><a href="#luxury">Tours</a></li>
-<li><a href="#history">History</a></li>
-<li><a href="#nature">Nature</a></li>
-<li><a href="#testimonials">Reviews</a></li>
-</ul>
-</nav>
+<header>
+  <h1>El Corord</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#destinos">Destinos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-<div class="hero-overlay">
-<h2>Discover the Real Dominican Republic</h2>
-<p>Luxury • Culture • Adventure</p>
-<a class="btn-main" href="#luxury">Explore Tours</a>
-</div>
+<section class="hero" id="inicio">
+  <h2>Descubre la belleza de la República Dominicana</h2>
+  <p>Playas paradisíacas, cultura vibrante y experiencias inolvidables.</p>
+  <a href="#destinos" class="btn">Explorar destinos</a>
 </section>
 
-<!-- TOURS -->
-<section id="luxury">
-<h2>Our Premium Tours</h2>
-<div class="grid">
+<section class="destinos" id="destinos">
+  <h2>Destinos Populares</h2>
 
-<div class="card fade-in">
-<img src="images/punta-cana.jpg" alt="Punta Cana">
-<div class="card-content">
-<h3>Punta Cana Luxury</h3>
-<p class="price">US$129 per person</p>
-<p>Resorts, Isla Saona & Caribbean paradise.</p>
-<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
-</div>
-</div>
+  <div class="grid">
 
-<div class="card fade-in">
-<img src="images/samana.jpg" alt="Samana">
-<div class="card-content">
-<h3>Samaná Experience</h3>
-<p class="price">US$149 per person</p>
-<p>Waterfalls, whales & Cayo Levantado.</p>
-<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
-</div>
-</div>
+    <div class="card">
+      <img src="imagen/punta-cana.jpg" alt="Punta Cana">
+      <div class="card-content">
+        <h3>Punta Cana</h3>
+        <p>Resorts todo incluido y playas de arena blanca.</p>
+        <p class="precio">Desde US$299</p>
+      </div>
+    </div>
 
-<div class="card fade-in">
-<img src="images/bahia-aguilas.jpg" alt="Bahia de las Aguilas">
-<div class="card-content">
-<h3>Bahía de las Águilas</h3>
-<p class="price">US$165 per person</p>
-<p>Pristine beaches & national park.</p>
-<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
-</div>
-</div>
+    <div class="card">
+      <img src="imagen/santo-domingo.jpg" alt="Santo Domingo">
+      <div class="card-content">
+        <h3>Santo Domingo</h3>
+        <p>Historia y cultura en la Zona Colonial.</p>
+        <p class="precio">Desde US$149</p>
+      </div>
+    </div>
 
-</div>
+    <div class="card">
+      <img src="imagen/samana.jpg" alt="Samaná">
+      <div class="card-content">
+        <h3>Samaná</h3>
+        <p>Naturaleza impresionante y aventura ecológica.</p>
+        <p class="precio">Desde US$199</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="testimonials">
-<h2>What Our Travelers Say</h2>
-
-<div class="grid">
-
-<div class="testimonial fade-in">
-<p>"Absolutely incredible experience! Best tour company in Dominican Republic."</p>
-<h4>— Sarah M., USA</h4>
-</div>
-
-<div class="testimonial fade-in">
-<p>"Professional guides and amazing service. Highly recommended!"</p>
-<h4>— Carlos R., Spain</h4>
-</div>
-
-<div class="testimonial fade-in">
-<p>"Luxury and authenticity combined perfectly."</p>
-<h4>— Ana L., Mexico</h4>
-</div>
-
-</div>
+<section class="contacto" id="contacto">
+  <h2>Contáctanos</h2>
+  <p>Email: info@elcorord.com</p>
+  <p>Teléfono: +1 809-000-0000</p>
 </section>
-
-<a class="whatsapp" href="https://wa.me/18493425653" target="_blank">Chat on WhatsApp</a>
 
 <footer>
-© 2026 Rutas Quisqueyanas – Dominican Republic Travel Experts 🇩🇴
+  <p>© 2026 El Corord - República Dominicana</p>
 </footer>
 
 <script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("show");
-}
+console.log("El Corord cargado correctamente");
 
-/* Fade in animation */
-const faders = document.querySelectorAll(".fade-in");
-
-const appearOptions = {
-threshold: 0.3
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-entries.forEach(entry=>{
-if(!entry.isIntersecting){
-return;
-}else{
-entry.target.classList.add("appear");
-observer.unobserve(entry.target);
-}
+// Pequeño efecto suave al hacer clic en menú
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
 });
-}, appearOptions);
-
-faders.forEach(fader=>{
-appearOnScroll.observe(fader);
-});
-<link rel="stylesheet" href="style.css">
 </script>
 
 </body>
