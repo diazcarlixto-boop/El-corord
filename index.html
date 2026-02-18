@@ -295,6 +295,28 @@ document.getElementById("reviews").appendChild(review);
 e.target.reset();
 }
 </script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyA5klJ1Rs6r6M_5Yne45hJgPD7yl8CarO4",
+    authDomain: "el-corord.firebaseapp.com",
+    projectId: "el-corord",
+    storageBucket: "el-corord.firebasestorage.app",
+    messagingSenderId: "1023451128098",
+    appId: "1:1023451128098:web:6556cbc8a6af3358a0457b",
+    measurementId: "G-CV8TNRKWHJ"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
