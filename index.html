@@ -6,116 +6,40 @@
 
 <title>Rutas Quisqueyanas | Turismo en República Dominicana</title>
 
-<meta name="description" content="Descubre la República Dominicana con Rutas Quisqueyanas. Tours en Punta Cana, Zona Colonial, Jarabacoa, Bahía de las Águilas y más. Experiencias auténticas con guías dominicanos.">
-<meta name="keywords" content="Turismo República Dominicana, Tours Punta Cana, Zona Colonial, Jarabacoa, Bahía de las Águilas, Excursiones RD">
-
-<meta property="og:title" content="Rutas Quisqueyanas 🇩🇴">
-<meta property="og:description" content="Experiencias auténticas en la República Dominicana.">
-<meta property="og:type" content="website">
+<meta name="description" content="Descubre la República Dominicana con Rutas Quisqueyanas. Tours en Punta Cana, Zona Colonial, Jarabacoa, Bahía de las Águilas y más.">
+<meta name="keywords" content="Turismo República Dominicana, Tours Punta Cana, Zona Colonial, Jarabacoa, Bahía de las Águilas">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
-body{background:#f4f8fb;color:#222;}
-
-/* NAVBAR */
-.navbar{
-position:fixed;top:0;width:100%;
-background:#002855;padding:18px 40px;
-display:flex;justify-content:space-between;align-items:center;
-z-index:1000;transition:0.3s;
-}
-.navbar.scrolled{background:#001d3d;box-shadow:0 5px 20px rgba(0,0,0,0.3);}
-.navbar h1{color:white;font-size:20px;}
-.navbar ul{list-style:none;display:flex;gap:25px;}
-.navbar a{color:white;text-decoration:none;font-weight:500;}
-
-/* HERO */
-.hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-url('https://cdn.pixabay.com/photo/2016/11/29/03/53/punta-cana-1867024_1280.jpg') center/cover no-repeat;
-display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:white;padding:20px;
-}
-.hero h2{font-size:50px;margin-bottom:20px;}
-.hero p{font-size:20px;margin-bottom:30px;}
-.btn-main{background:#d00000;color:white;padding:14px 30px;border-radius:8px;font-weight:700;text-decoration:none;}
-
-/* SECTIONS */
-section{padding:100px 40px;}
-h2{text-align:center;margin-bottom:50px;font-size:34px;color:#002855;}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;max-width:1200px;margin:auto;}
-
-.card{
-background:white;border-radius:18px;overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;cursor:pointer;
-}
-.card:hover{transform:translateY(-6px);}
-.card img{width:100%;height:220px;object-fit:cover;}
-.card-content{padding:20px;}
-.price{font-weight:700;color:#d00000;margin:8px 0;}
-.details{font-size:14px;margin:5px 0;color:#555;}
-
-/* ABOUT */
-.about{background:#e9f2ff;text-align:center;}
-.about p{max-width:800px;margin:auto;font-size:16px;line-height:1.6;}
-
-/* REVIEWS */
-.review-card{
-background:white;padding:25px;border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* WHY */
-.why{background:#f1f7ff;text-align:center;}
-.why .grid div{
-background:white;padding:25px;border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* FOOTER */
-footer{background:#001d3d;color:white;text-align:center;padding:40px;}
-footer p{margin:5px 0;}
-
-/* WHATSAPP */
-.whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;color:white;
-padding:15px 20px;border-radius:50px;
-font-weight:600;text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-</style>
 </head>
-
 <body>
 
-<div class="navbar" id="navbar">
+<header class="navbar" id="navbar">
 <h1>Rutas Quisqueyanas 🇩🇴</h1>
+<nav>
 <ul>
-<li><a href="#luxury">Destinos</a></li>
+<li><a href="#destinos">Destinos</a></li>
 <li><a href="#about">Nosotros</a></li>
 <li><a href="#reviews">Reseñas</a></li>
 <li><a href="#why">¿Por qué elegirnos?</a></li>
 </ul>
-</div>
+</nav>
+</header>
 
 <section class="hero">
 <h2>Descubre la Verdadera República Dominicana</h2>
 <p>Playas paradisíacas • Historia colonial • Naturaleza caribeña</p>
-<a class="btn-main" href="#luxury">Explorar Tours</a>
+<a class="btn-main" href="#destinos">Explorar Tours</a>
 </section>
 
-<section id="luxury">
+<section id="destinos">
 <h2>Destinos Destacados</h2>
+
 <div class="grid">
 
 <div class="card" onclick="sendWhatsApp('Punta Cana Luxury Experience')">
-<img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/punta-cana-1867024_1280.jpg" alt="Punta Cana República Dominicana">
+<img src="images/punta-cana.jpg" alt="Punta Cana República Dominicana">
 <div class="card-content">
 <h3>Punta Cana Luxury Experience</h3>
 <p class="price">US$129 por persona</p>
@@ -125,7 +49,7 @@ box-shadow:0 5px 15px rgba(0,0,0,0.3);
 </div>
 
 <div class="card" onclick="sendWhatsApp('Bahía de las Águilas')">
-<img src="https://cdn.pixabay.com/photo/2017/06/16/21/36/beach-2416518_1280.jpg" alt="Bahía de las Águilas República Dominicana">
+<img src="images/bahia-aguilas.jpg" alt="Bahía de las Águilas República Dominicana">
 <div class="card-content">
 <h3>Bahía de las Águilas</h3>
 <p class="price">US$165 por persona</p>
@@ -142,41 +66,48 @@ box-shadow:0 5px 15px rgba(0,0,0,0.3);
 <p>
 Somos una empresa 100% dominicana dedicada a mostrar lo mejor de nuestra tierra.
 Nuestros guías certificados conocen cada rincón de la República Dominicana y
-te garantizan una experiencia auténtica, segura y memorable.
+garantizan una experiencia auténtica, segura y memorable.
 </p>
 </section>
 
 <section id="reviews">
 <h2>Lo que dicen nuestros clientes</h2>
 <div class="grid">
+
 <div class="review-card">
 <p>⭐⭐⭐⭐⭐</p>
 <p>“Una experiencia inolvidable en Punta Cana. Servicio impecable.”</p>
 <p><strong>— María Rodríguez, Santiago</strong></p>
 </div>
+
 <div class="review-card">
 <p>⭐⭐⭐⭐⭐</p>
 <p>“El mejor tour a Bahía de las Águilas que he vivido.”</p>
 <p><strong>— John Williams, USA</strong></p>
 </div>
+
 </div>
 </section>
 
 <section id="why" class="why">
 <h2>¿Por qué elegirnos?</h2>
 <div class="grid">
+
 <div>
 <h3>Guías Certificados</h3>
 <p>Expertos locales apasionados por nuestra cultura.</p>
 </div>
+
 <div>
 <h3>Transporte Premium</h3>
 <p>Seguridad y comodidad garantizadas.</p>
 </div>
+
 <div>
 <h3>Empresa Registrada en RD</h3>
 <p>Operamos legalmente y con seguro incluido.</p>
 </div>
+
 </div>
 </section>
 
@@ -190,17 +121,7 @@ Reservar por WhatsApp
 <p>Tel: +1 (849) 342-5653</p>
 </footer>
 
-<script>
-window.addEventListener("scroll",function(){
-document.getElementById("navbar")
-.classList.toggle("scrolled",window.scrollY>50);
-});
-
-function sendWhatsApp(tour){
-let message=`Hola, mi nombre es ____. Deseo reservar el tour ${tour}. Por favor envíenme más información.`;
-window.open(`https://wa.me/18493425653?text=${encodeURIComponent(message)}`,'_blank');
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
