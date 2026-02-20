@@ -1,402 +1,321 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rutas Quisqueyanas | Discover Dominican Republic</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>El Coro RD | Turismo Oficial República Dominicana 🇩🇴</title>
+
+<meta name="description" content="El Coro RD - Portal completo de turismo en República Dominicana. Playas, excursiones, historia, hoteles, transporte, clima y reservas directas con contacto personalizado.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+body{background:#f4f6f9;color:#333;}
+header{background:linear-gradient(135deg,#002D62,#CE1126);color:white;padding:30px;text-align:center;}
+header h1{font-size:2.7rem;}
+header p{margin-top:10px;}
 
-body{
-background:#f4f8fb;
-color:#222;
-}
+nav{background:white;display:flex;justify-content:center;gap:25px;padding:15px;flex-wrap:wrap;box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+nav a{text-decoration:none;color:#002D62;font-weight:600;}
+nav a:hover{color:#CE1126;}
 
-/* NAVBAR */
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-background:#002855;
-padding:18px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-box-shadow:0 4px 15px rgba(0,0,0,0.2);
-}
+.hero{background:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b') center/cover;height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;color:white;}
+.hero h2{font-size:3rem;background:rgba(0,0,0,0.6);padding:30px;border-radius:10px;}
 
-.navbar h1{
-color:white;
-font-size:22px;
-}
+section{padding:80px 10%;}
+section h2{text-align:center;margin-bottom:40px;color:#002D62;}
 
-.navbar ul{
-list-style:none;
-display:flex;
-gap:25px;
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
 
-.navbar a{
-color:white;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
+.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.1);transition:0.3s;}
+.card:hover{transform:translateY(-8px);}
+.card img{width:100%;height:220px;object-fit:cover;}
+.card-content{padding:20px;}
+.card-content h3{color:#CE1126;margin-bottom:10px;}
 
-.navbar a:hover{
-opacity:0.8;
-}
+.button{display:inline-block;padding:12px 20px;background:#CE1126;color:white;text-decoration:none;border-radius:6px;margin-top:10px;}
+.button:hover{background:#002D62;}
 
-/* HERO */
-.hero{
-height:100vh;
-background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600') center/cover no-repeat;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-padding-top:60px;
-}
+form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:15px;}
+input,textarea,select{padding:12px;border-radius:6px;border:1px solid #ccc;}
+button{padding:12px;background:#002D62;color:white;border:none;border-radius:6px;cursor:pointer;}
+button:hover{background:#CE1126;}
 
-.hero h2{
-font-size:55px;
-margin-bottom:20px;
-text-shadow:0 5px 20px rgba(0,0,0,0.4);
-}
+.review{background:white;padding:15px;border-radius:10px;margin-bottom:15px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
 
-.hero p{
-font-size:20px;
-margin-bottom:30px;
-}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:16px;border-radius:50%;font-size:22px;text-decoration:none;box-shadow:0 5px 15px rgba(0,0,0,0.3);}
 
-.btn-main{
-background:#d00000;
-color:white;
-padding:14px 30px;
-border-radius:8px;
-font-weight:700;
-text-decoration:none;
-}
+footer{background:#002D62;color:white;text-align:center;padding:40px;}
 
-/* SECTIONS */
-section{
-padding:100px 40px;
-opacity:0;
-transform:translateY(30px);
-transition:0.8s ease;
-}
+.fade{opacity:0;transform:translateY(40px);transition:1s;}
+.visible{opacity:1;transform:translateY(0);}
 
-section.visible{
-opacity:1;
-transform:translateY(0);
-}
-
-h2{
-text-align:center;
-margin-bottom:50px;
-font-size:36px;
-color:#002855;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-max-width:1200px;
-margin:auto;
-}
-
-.card{
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.4s;
-cursor:pointer;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
-width:100%;
-height:240px;
-object-fit:cover;
-}
-
-.card-content{
-padding:25px;
-}
-
-.price{
-font-weight:700;
-margin:10px 0;
-color:#d00000;
-}
-
-.btn{
-display:inline-block;
-margin-top:10px;
-background:#002855;
-color:white;
-padding:10px 18px;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
-}
-
-/* WHY */
-.why{
-background:#e9f2ff;
-text-align:center;
-}
-
-.why .grid div{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* MODAL */
-.modal{
-display:none;
-position:fixed;
-z-index:2000;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-justify-content:center;
-align-items:center;
-padding:40px;
-overflow:auto;
-}
-
-.modal-content{
-max-width:900px;
-width:100%;
-}
-
-.modal img{
-width:100%;
-border-radius:15px;
-margin-bottom:15px;
-}
-
-.modal h3{
-color:white;
-margin-bottom:5px;
-}
-
-.modal p{
-color:#ddd;
-margin-bottom:25px;
-}
-
-.close{
-position:absolute;
-top:20px;
-right:40px;
-color:white;
-font-size:35px;
-cursor:pointer;
-}
-
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-font-weight:600;
-text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* FOOTER */
-footer{
-background:#001d3d;
-color:white;
-text-align:center;
-padding:30px;
-}
+.counter{font-size:2rem;color:#CE1126;text-align:center;margin-top:20px;}
+iframe{width:100%;height:400px;border:none;border-radius:15px;}
 </style>
 </head>
 
 <body>
 
-<div class="navbar">
-<h1>Rutas Quisqueyanas ð©ð´</h1>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#luxury">Luxury</a></li>
-<li><a href="#history">History</a></li>
-<li><a href="#nature">Nature</a></li>
-<li><a href="#why">Why Us</a></li>
-</ul>
+<header>
+<h1>El Coro RD 🇩🇴</h1>
+<p>La Guía Completa para Descubrir República Dominicana</p>
+</header>
+
+<nav>
+<a href="#destinos">Destinos</a>
+<a href="#aventura">Aventura</a>
+<a href="#historia">Historia</a>
+<a href="#planifica">Planifica</a>
+<a href="#paquetes">Paquetes</a>
+<a href="#reservas">Reservar</a>
+<a href="#resenas">Reseñas</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+<div class="hero">
+<h2>Tu experiencia inolvidable comienza aquí</h2>
 </div>
 
-<section class="hero" id="home">
-<h2>Experience the Authentic Dominican Republic</h2>
-<p>Luxury Beaches â¢ Colonial History â¢ Caribbean Nature</p>
-<a class="btn-main" href="#luxury">Explore Destinations</a>
-</section>
-
-<!-- LUXURY -->
-<section id="luxury">
-<h2>Luxury Caribbean Destinations</h2>
-<div class="grid">
-
-<div class="card" onclick="openModal()">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Punta Cana">
-<div class="card-content">
-<h3>Punta Cana Luxury Experience</h3>
-<p class="price">US$129 per person</p>
-<p>Hotel pickup â¢ Buffet â¢ Open bar â¢ Certified guide â¢ Insurance</p>
-<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4" alt="SamanÃ¡">
-<div class="card-content">
-<h3>SamanÃ¡ & Cayo Levantado</h3>
-<p class="price">US$149 per person</p>
-<p>Boat ride â¢ Waterfalls â¢ Lunch included â¢ Small groups</p>
-<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c" alt="BahÃ­a de las Ãguilas">
-<div class="card-content">
-<h3>BahÃ­a de las Ãguilas</h3>
-<p class="price">US$165 per person</p>
-<p>4x4 transport â¢ Boat access â¢ National park â¢ Free cancellation</p>
-<a class="btn" href="https://wa.me/18493425653" target="_blank">Book Now</a>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- HISTORY -->
-<section id="history">
-<h2>Historic & Cultural Experiences</h2>
+<section id="destinos" class="fade">
+<h2>🌴 Destinos Principales</h2>
 <div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1605130284535-11dd9eedc58a" alt="Zona Colonial">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
 <div class="card-content">
-<h3>Zona Colonial â Santo Domingo</h3>
-<p>First cathedral of the Americas & cobblestone streets full of history.</p>
+<h3>Punta Cana</h3>
+<p>Resorts todo incluido, playas cristalinas y vida nocturna.</p>
 </div>
 </div>
 
 <div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Faro_a_Col%C3%B3n_Santo_Domingo.jpg" alt="Faro a ColÃ³n">
+<img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c">
 <div class="card-content">
-<h3>Faro a ColÃ³n</h3>
-<p>One of the most iconic landmarks in the Dominican Republic.</p>
+<h3>Samaná</h3>
+<p>Cascadas, naturaleza y avistamiento de ballenas.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596386461350-326ccb383e9f">
+<div class="card-content">
+<h3>Bahía de las Águilas</h3>
+<p>Playa virgen considerada una de las más hermosas del Caribe.</p>
 </div>
 </div>
 
 </div>
 </section>
 
-<!-- NATURE -->
-<section id="nature">
-<h2>Mountains & Eco Adventures</h2>
+<section id="aventura" class="fade">
+<h2>🚤 Turismo de Aventura</h2>
+<p style="text-align:center;">Kayak en Los Haitises, boogie en Macao, senderismo en Jarabacoa, 27 Charcos de Damajagua, Isla Saona y más.</p>
+
+<div style="text-align:center;margin:20px;">
+<button onclick="toggleAventura()">Ver Experiencias</button>
+</div>
+
+<div class="grid" id="aventuraGaleria" style="display:none;">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1624902524147-9d0c4b5f16c3">
+<div class="card-content">
+<h3>27 Charcos de Damajagua</h3>
+<p>Saltos naturales y adrenalina pura en Puerto Plata.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1587502537745-84d5e6c6e2f9">
+<div class="card-content">
+<h3>Parque Nacional Los Haitises</h3>
+<p>Manglares, cuevas y excursiones en kayak en Samaná.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf">
+<div class="card-content">
+<h3>Isla Saona</h3>
+<p>Excursiones en catamarán y piscinas naturales.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="historia" class="fade">
+<h2>🏛 Historia & Cultura</h2>
+<p style="text-align:center;">Descubre la Zona Colonial, el Faro a Colón y el Alcázar de Colón en Santo Domingo.</p>
+
+<div style="text-align:center;margin:20px;">
+<button onclick="toggleHistoria()">Ver Lugares Históricos</button>
+</div>
+
+<div class="grid" id="historiaGaleria" style="display:none;">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd">
+<div class="card-content">
+<h3>Zona Colonial</h3>
+<p>Primera ciudad del Nuevo Mundo.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1620161971374-0c2f8b2f7c77">
+<div class="card-content">
+<h3>Faro a Colón</h3>
+<p>Monumento histórico emblemático.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1615295619785-6a0e97c7c1b3">
+<div class="card-content">
+<h3>Alcázar de Colón</h3>
+<p>Residencia histórica del hijo de Cristóbal Colón.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="planifica" class="fade">
+<h2>✈️ Planifica tu Viaje</h2>
+
+<p><strong>Moneda:</strong> Peso Dominicano (DOP)</p>
+<p><strong>Idioma:</strong> Español (Inglés hablado en zonas turísticas)</p>
+<p><strong>Clima:</strong> Tropical todo el año (25°-32°C)</p>
+<p><strong>Temporada alta:</strong> Diciembre - Abril</p>
+
+<h3 style="margin-top:40px;">Descubre tu Perfil Turístico</h3>
+
+<form onsubmit="perfilTurista(event)">
+<select id="p1">
+<option value="aventura">Me gusta la adrenalina</option>
+<option value="relax">Prefiero relajación y playa</option>
+<option value="historia">Me encanta la historia</option>
+</select>
+
+<select id="p2">
+<option value="naturaleza">Amo la naturaleza</option>
+<option value="ciudad">Prefiero ciudad y cultura</option>
+</select>
+
+<button>Descubrir</button>
+</form>
+
+<div id="resultadoPerfil" style="margin-top:20px;font-weight:bold;text-align:center;"></div>
+
+<div class="counter">
+Visitantes hoy: <span id="contador"></span>
+</div>
+
+<h3 style="margin-top:50px;text-align:center;">Ubicación</h3>
+<iframe src="https://maps.google.com/maps?q=dominican%20republic&t=&z=7&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</section>
+
+<section id="paquetes" class="fade">
+<h2>💎 Paquetes Premium</h2>
 <div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Pico Duarte">
-<div class="card-content">
-<h3>Pico Duarte</h3>
-<p>The highest mountain in the Caribbean.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Jarabacoa">
-<div class="card-content">
-<h3>Jarabacoa</h3>
-<p>Salto Jimenoa, rafting & cool mountain weather.</p>
-</div>
-</div>
-
+<div class="card"><div class="card-content"><h3>Paquete Aventura</h3><p>3 días en Jarabacoa + 27 Charcos.</p></div></div>
+<div class="card"><div class="card-content"><h3>Paquete Histórico</h3><p>Tour Zona Colonial + Santiago.</p></div></div>
+<div class="card"><div class="card-content"><h3>Paquete Relax</h3><p>4 días todo incluido en Punta Cana.</p></div></div>
 </div>
 </section>
 
-<!-- WHY -->
-<section id="why" class="why">
-<h2>Why Choose Rutas Quisqueyanas</h2>
-<div class="grid">
-<div>
-<h3>Certified Dominican Guides</h3>
-<p>Local experts passionate about our country.</p>
-</div>
-<div>
-<h3>Premium Transportation</h3>
-<p>Comfort, safety & professionalism guaranteed.</p>
-</div>
-<div>
-<h3>Authentic Experiences</h3>
-<p>We show you the real Dominican Republic.</p>
-</div>
-</div>
+<section id="reservas">
+<h2>📅 Reserva tu Experiencia</h2>
+<form onsubmit="sendReservation(event)">
+<input type="text" required placeholder="Nombre completo">
+<input type="email" required placeholder="Correo electrónico">
+<input type="date" required>
+<button type="submit">Enviar Solicitud</button>
+</form>
 </section>
 
-<div id="puntaCanaModal" class="modal" onclick="closeModal()">
-<span class="close">&times;</span>
-<div class="modal-content">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
-<h3>Punta Cana Experience</h3>
-<p>Turquoise waters, luxury resorts and unforgettable Caribbean sunsets.</p>
-</div>
-</div>
+<section id="resenas">
+<h2>⭐ Opiniones de Viajeros</h2>
+<form onsubmit="addReview(event)">
+<input type="text" id="name" placeholder="Tu nombre" required>
+<textarea id="text" placeholder="Escribe tu experiencia" required></textarea>
+<button>Publicar</button>
+</form>
+<div id="reviews"></div>
+</section>
 
-<a class="whatsapp" href="https://wa.me/18493425653" target="_blank">Chat on WhatsApp</a>
+<section id="contacto">
+<h2>📞 Contacto Directo</h2>
+<p style="text-align:center;">
+📱 WhatsApp / Tel: <strong>849-342-5653</strong><br>
+📸 Instagram: <strong>@DíazCalixto</strong>
+</p>
+</section>
+
+<a class="whatsapp" target="_blank" href="https://wa.me/18493425653">💬</a>
 
 <footer>
-Â© 2026 Rutas Quisqueyanas â Dominican Republic Travel Experts ð©ð´
+<p>©️ 2026 El Coro RD - Turismo Oficial República Dominicana 🇩🇴</p>
+<p>Fundado y gestionado por Díaz Calixto</p>
 </footer>
 
 <script>
-function openModal(){
-document.getElementById("puntaCanaModal").style.display="flex";
+function toggleAventura(){
+let g=document.getElementById("aventuraGaleria");
+g.style.display=g.style.display==="none"?"grid":"none";
 }
 
-function closeModal(){
-document.getElementById("puntaCanaModal").style.display="none";
+function toggleHistoria(){
+let g=document.getElementById("historiaGaleria");
+g.style.display=g.style.display==="none"?"grid":"none";
 }
 
-window.addEventListener("scroll", function(){
-document.querySelectorAll("section").forEach(sec=>{
-const position=sec.getBoundingClientRect().top;
-if(position<window.innerHeight-100){
-sec.classList.add("visible");
+function perfilTurista(e){
+e.preventDefault();
+let p1=document.getElementById("p1").value;
+let p2=document.getElementById("p2").value;
+let r="";
+if(p1==="aventura"||p2==="naturaleza"){
+r="🔥 Eres Explorador. Te recomendamos Jarabacoa, 27 Charcos y Los Haitises.";
 }
+else if(p1==="historia"||p2==="ciudad"){
+r="🏛 Perfil Cultural. Zona Colonial y Santiago son ideales para ti.";
+}
+else{
+r="🌴 Perfil Relax. Punta Cana y Samaná son perfectos para ti.";
+}
+document.getElementById("resultadoPerfil").innerHTML=r;
+}
+
+function sendReservation(e){
+e.preventDefault();
+alert("Gracias por tu solicitud. Nos comunicaremos contigo vía WhatsApp.");
+}
+
+function addReview(e){
+e.preventDefault();
+let n=document.getElementById("name").value;
+let t=document.getElementById("text").value;
+let div=document.createElement("div");
+div.className="review";
+div.innerHTML="<strong>"+n+"</strong><p>"+t+"</p>";
+document.getElementById("reviews").appendChild(div);
+e.target.reset();
+}
+
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".fade").forEach(el=>{
+let pos=el.getBoundingClientRect().top;
+if(pos<window.innerHeight-100){el.classList.add("visible");}
 });
 });
+
+document.getElementById("contador").innerText=Math.floor(Math.random()*500+100);
 </script>
 
 </body>
